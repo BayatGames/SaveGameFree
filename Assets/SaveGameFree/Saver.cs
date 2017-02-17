@@ -312,9 +312,9 @@ namespace SaveGameFree
 		/// <param name="fileName">File name.</param>
 		/// <param name="serializer">Serializer.</param>
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static T Load<T> ( string fileName, ISerializer serializer )
+		public static T Load<T> ( string fileName, ISerializer serializer ) where T : new()
 		{
-			T obj = default(T);
+			T obj = new T ();
 			string filePath = GetFilePath ( fileName, FileExtension, SavePath );
 			if ( !File.Exists ( filePath ) )
 			{
@@ -332,9 +332,10 @@ namespace SaveGameFree
 		/// </summary>
 		/// <param name="fileName">File name.</param>
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static T Load<T> ( string fileName )
+		public static T Load<T> ( string fileName ) where T : new()
 		{
-			T obj = default(T);
+			T obj = new T ();
+			Debug.Log ( obj );
 			string filePath = GetFilePath ( fileName, FileExtension, SavePath );
 			if ( !File.Exists ( filePath ) )
 			{
@@ -342,6 +343,8 @@ namespace SaveGameFree
 				return obj;
 			}
 			obj = Serializer.Deserialize<T> ( filePath );
+			if ( obj == null )
+				obj = new T ();
 			if ( OnLoaded != null )
 				OnLoaded ( obj );
 			return obj;
@@ -354,9 +357,9 @@ namespace SaveGameFree
 		/// <param name="savePath">Save path.</param>
 		/// <param name="serializer">Serializer.</param>
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static T Load<T> ( string fileName, PathType savePath, ISerializer serializer )
+		public static T Load<T> ( string fileName, PathType savePath, ISerializer serializer ) where T : new()
 		{
-			T obj = default(T);
+			T obj = new T ();
 			string filePath = GetFilePath ( fileName, FileExtension, savePath );
 			if ( !File.Exists ( filePath ) )
 			{
@@ -364,6 +367,8 @@ namespace SaveGameFree
 				return obj;
 			}
 			obj = serializer.Deserialize<T> ( filePath );
+			if ( obj == null )
+				obj = new T ();
 			if ( OnLoaded != null )
 				OnLoaded ( obj );
 			return obj;
@@ -375,9 +380,9 @@ namespace SaveGameFree
 		/// <param name="fileName">File name.</param>
 		/// <param name="savePath">Save path.</param>
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static T Load<T> ( string fileName, PathType savePath )
+		public static T Load<T> ( string fileName, PathType savePath ) where T : new()
 		{
-			T obj = default(T);
+			T obj = new T ();
 			string filePath = GetFilePath ( fileName, FileExtension, savePath );
 			if ( !File.Exists ( filePath ) )
 			{
@@ -385,6 +390,8 @@ namespace SaveGameFree
 				return obj;
 			}
 			obj = Serializer.Deserialize<T> ( filePath );
+			if ( obj == null )
+				obj = new T ();
 			if ( OnLoaded != null )
 				OnLoaded ( obj );
 			return obj;
@@ -398,9 +405,9 @@ namespace SaveGameFree
 		/// <param name="savePath">Save path.</param>
 		/// <param name="serializer">Serializer.</param>
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static T Load<T> ( string fileName, string extension, PathType savePath, ISerializer serializer )
+		public static T Load<T> ( string fileName, string extension, PathType savePath, ISerializer serializer ) where T : new()
 		{
-			T obj = default(T);
+			T obj = new T ();
 			string filePath = GetFilePath ( fileName, extension, savePath );
 			if ( !File.Exists ( filePath ) )
 			{
@@ -408,6 +415,8 @@ namespace SaveGameFree
 				return obj;
 			}
 			obj = serializer.Deserialize<T> ( filePath );
+			if ( obj == null )
+				obj = new T ();
 			if ( OnLoaded != null )
 				OnLoaded ( obj );
 			return obj;
@@ -420,9 +429,9 @@ namespace SaveGameFree
 		/// <param name="extension">Extension.</param>
 		/// <param name="savePath">Save path.</param>
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static T Load<T> ( string fileName, string extension, PathType savePath )
+		public static T Load<T> ( string fileName, string extension, PathType savePath ) where T : new()
 		{
-			T obj = default(T);
+			T obj = new T ();
 			string filePath = GetFilePath ( fileName, extension, savePath );
 			if ( !File.Exists ( filePath ) )
 			{
@@ -430,6 +439,8 @@ namespace SaveGameFree
 				return obj;
 			}
 			obj = Serializer.Deserialize<T> ( filePath );
+			if ( obj == null )
+				obj = new T ();
 			if ( OnLoaded != null )
 				OnLoaded ( obj );
 			return obj;

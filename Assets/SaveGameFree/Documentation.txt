@@ -1,0 +1,19 @@
+Welcome to Save Game Free Documentation.
+
+Getting Started
+
+Easily in your intialization script include "using SaveGameFree;" at top then 
+add "Saver.InitializeDefault();" to your initializer method such as "Awake" method.
+
+When you call "Saver.InitializeDefault()" this will initializes the Saver with default paramters.
+The parameters provided for initilization are:
+format: What format you want to save your files. (Default: JSON)
+preferredExtension: The save file preferred extension, if you leave it empty this will replaced by format extension. (Default: "")
+savePath: Where you want to save your file. you have there selection: (Default: PersistentDataPath)
+    1 - Persistent Data Path (Application.persistentDataPath)
+    2 - Data Path (Application.dataPath)
+    3 - Streaming Assets Path (Application.streamingAssetsPath)
+
+Thats done.
+You can find more useful docs at "https://github.com/EmpireAssets/SaveGameFree/wiki".
+If you have any issue or improvement or request you send me an email at "hasanbayat1393@gmail.com".
