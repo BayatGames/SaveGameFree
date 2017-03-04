@@ -51,3 +51,12 @@ If you have any issues and problem with this package file a [new issue](https://
 
 ## Improvement
 You can also join to our improvement group, help us develop our packages better than old with your improvement recomendations easily make a [new issue](https://github.com/EmpireAssets/SaveGameFree/issues/new) and say your recommendation for us.
+
+## Chat Channels
+You can with us with these channels:
+
+[Slack](https://empireassets.slack.com)
+
+[Gitter](https://gitter.im/EmpireAssets/Lobby)
+
+Enjoy it.
