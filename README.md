@@ -59,4 +59,6 @@ You can with us with these channels:
 
 [Gitter](https://gitter.im/EmpireAssets/Lobby)
 
+[Google Group](https://groups.google.com/forum/#!forum/empireassets)
+
 Enjoy it.
