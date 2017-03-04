@@ -61,4 +61,6 @@ You can with us with these channels:
 
 [Google Group](https://groups.google.com/forum/#!forum/empireassets)
 
+[Google Plus](https://plus.google.com/communities/108974587311747022650)
+
 Enjoy it.
