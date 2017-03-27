@@ -25,6 +25,9 @@ or you can clone using [below description](#contribution).
 ## Getting Started
 Go to [Wiki](https://github.com/EmpireAssets/SaveGameFree/wiki) where you will find useful docs.
 
+## Examples
+For examples see wiki page and find [Examples](https://github.com/EmpireAssets/SaveGameFree/wiki/Examples) Page and enjoy it.
+
 ## Rate it!
 If you like it [Write Review](https://www.assetstore.unity3d.com/#!/content/81519) and add a Star to this repository to make us happy.
 
