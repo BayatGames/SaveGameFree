@@ -68,6 +68,8 @@ You can join us at:
 
 [Facebook](https://www.facebook.com/EmpireAssets-277386306024083/)
 
+[Twitter (Hasan Bayat)](https://www.twitter.com/EmpireWorld1393)
+
 Enjoy it.
 
 All the bests.
