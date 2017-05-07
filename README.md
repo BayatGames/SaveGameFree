@@ -58,6 +58,8 @@ You can also join to our improvement group, help us develop our packages better 
 ## Join our Community
 You can join us at:
 
+[Telegram](t.me/empireassets)
+
 [Slack](https://empireassets.slack.com)
 
 [Gitter](https://gitter.im/EmpireAssets/Lobby)
