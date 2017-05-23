@@ -74,4 +74,9 @@ You can join us at:
 
 Enjoy it.
 
-All the bests.
+Thanks.
+
+## License
+MIT @ [Bayat](https://github.com/EmpireWorld)
+
+Made with :heart: by [Bayat](https://github.com/EmpireWorld)
