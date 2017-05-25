@@ -5,59 +5,91 @@ Save Game Free is a free and simple but powerful solution for saving and loading
 
 ## Features
 The Save Game Free has some features that might be useful for you:
-- Cross Platform (Windows, Mac, Linux, Android, iOS, Tizen, ...)
+- Cross Platform (Windows, Mac, Linux, Android, iOS, Tizen, ...) but WebGL not supported. (You can get Full cross platform support by [Save Game Pro](https://github.com/EmpireAssets/SaveGamePro/) and with WebGL support)
 - Easy to use
 - Free to use
 - Open Source (You can fork and create it again!)
 - Simple but Powerful
-- Built-in JSON and Binary Serialization support
+- Built-in JSON, XML and Binary Serialization support
 - Custom Serialization Support ([Read More](https://github.com/EmpireAssets/SaveGameFree/wiki/How-to-Create-Custom-Serializer%3F))
 
 ## Download
-You can download or clone source project from here.
+[:sparkles: Download from Asset Store](https://www.assetstore.unity3d.com/#!/content/81519)
 
-You can get distributed content from asset store using below link:
+Or
 
-[SaveGameFree AssetStore](https://www.assetstore.unity3d.com/#!/content/81519)
+[:rocket: Download the latest version from the Releases section](https://github.com/EmpireAssets/SaveGameFree/releases)
 
-or you can clone using [below description](#contribution).
+Or
+
+[:fire: Download the Source Code](https://github.com/EmpireAssets/SaveGameFree/archive/master.zip)
 
 ## Getting Started
-Go to [Wiki](https://github.com/EmpireAssets/SaveGameFree/wiki) where you will find useful docs.
+Let me give a simple example.
 
-## Examples
-For examples see wiki page and find [Examples](https://github.com/EmpireAssets/SaveGameFree/wiki/Examples) Page and enjoy it.
+It is our **GameData** class that contains the game data we want to save, such as score, achievements, ...
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-## Rate it!
-If you like it [Write Review](https://www.assetstore.unity3d.com/#!/content/81519) and add a Star to this repository to make us happy.
+// The game data the saves and loads from disk
+public class GameData {
 
-or comment your review at [Unity Forum Thread](https://forum.unity3d.com/threads/released-empireassets-save-game-free.457658/)
+  // Sample variable for the game data class
+  public int score = 0;
 
-## Development
-The Development Parts and Todos are available at [Trello](https://trello.com/b/lg9h77j9/empireassets-packages).
-
-## Contribution
-You are welcome for contribution.
-
-You can contribute to us from anywhere anytime. easily clone this repository using below command locally and make your changes and push it to master:
+}
 ```
-git clone https://github.com/EmpireAssets/SaveGameFree.git
+Then we use our **GameData** class to do save and load functionally as below:
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+using SaveGameFree;
+
+// Game data manager, saves and loads game data on start and exit.
+public class GameDataManager : MonoBehaviour {
+
+  // Our game data
+  public static GameData gameData;
+  
+  // Load data on start
+  void Awake () {
+    Saver.InitializeDefault ();
+    gameData = Saver.Load<GameData> ("gameData");
+  }
+  
+  void Update () {
+    
+    // Apply your functionally to the game data
+    
+    if (Time.time % 1) {
+      gameData.score = (int)Time.time;
+    }
+    
+  }
+  
+  // Save data on exit
+  void OnApplicationQuit () {
+    Saver.Save<GameData> (gameData, "gameData");
+  }
+
+}
 ```
-Then go in:
-```
-cd SaveGameFree
-```
-Don't forgot to rate us here and on [asset store](https://www.assetstore.unity3d.com/#!/content/81519).
+All done now this class will load game data on start and saves it on exit. thats what we want to implement.
 
-## Troubleshoot
-If you have any issues and problem with this package file a [new issue](https://github.com/EmpireAssets/SaveGameFree/issues/new).
+## Resources
+[:book: Examples](https://github.com/EmpireAssets/SaveGameFree/wiki/Examples)
 
-## Improvement
-You can also join to our improvement group, help us develop our packages better than old with your improvement recomendations easily make a [new issue](https://github.com/EmpireAssets/SaveGameFree/issues/new) and say your recommendation for us.
+[:sparkles: Write Review](https://www.assetstore.unity3d.com/#!/content/81519)
 
-## Join our Community
-You can join us at:
+[:fire: Community Thread](https://forum.unity3d.com/threads/released-empireassets-save-game-free.457658/)
 
+[:rocket: Development Board](https://trello.com/b/lg9h77j9/empireassets-packages)
+
+## Follow Us
 [Telegram](t.me/empireassets)
 
 [Slack](https://empireassets.slack.com)
@@ -71,8 +103,6 @@ You can join us at:
 [Facebook](https://www.facebook.com/EmpireAssets-277386306024083/)
 
 [Twitter (Hasan Bayat)](https://www.twitter.com/EmpireWorld1393)
-
-Enjoy it.
 
 Thanks.
 
