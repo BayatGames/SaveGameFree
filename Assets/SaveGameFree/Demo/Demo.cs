@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace SaveGameFree
@@ -24,7 +25,7 @@ namespace SaveGameFree
 			demoData = new DemoData ();
 
 			// Initialize the Saver with the default configurations
-			Saver.InitializeDefault ();
+			Saver.Initialize ();
 
 			// Load game data after initialization
 			demoData = Saver.Load<DemoData> ( fileName );
@@ -58,6 +59,10 @@ namespace SaveGameFree
 			{
 				// Load the game data
 				demoData = Saver.Load<DemoData> ( fileName );
+			}
+			if ( GUILayout.Button ( "Reload" ) )
+			{
+				Application.LoadLevel ( Application.loadedLevel );
 			}
 		}
 
