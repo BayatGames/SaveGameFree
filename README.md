@@ -22,7 +22,7 @@ Or
 
 Or
 
-[:rocket: Download the latest version from the Releases section](https://github.com/EmpireAssets/SaveGameFree/releases)
+[:rocket: Download the latest version from the Releases section](https://github.com/EmpireAssets/SaveGameFree/releases/latest)
 
 Or
 
