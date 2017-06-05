@@ -18,7 +18,11 @@ The Save Game Free has some features that might be useful for you:
 
 Or
 
-[:rocket: Download the latest version from the Releases section](https://github.com/EmpireAssets/SaveGameFree/releases)
+[:moneybag: Download from itch.io](https://bayat.itch.io/save-game-free)
+
+Or
+
+[:rocket: Download the latest version from the Releases section](https://github.com/EmpireAssets/SaveGameFree/releases/latest)
 
 Or
 
