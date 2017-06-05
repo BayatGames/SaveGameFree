@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+using SaveGameFree.Serializers;
+
 namespace SaveGameFree
 {
 
@@ -17,7 +19,6 @@ namespace SaveGameFree
 		/// </summary>
 		void Awake ()
 		{
-
 			Saver.OnSaved += Saver_OnSaved;
 			Saver.OnLoaded += Saver_OnLoaded;
 
@@ -25,44 +26,39 @@ namespace SaveGameFree
 			demoData = new DemoData ();
 
 			// Initialize the Saver with the default configurations
-			Saver.Initialize ();
+			Saver.Initialize (FormatType.JSON);
 
 			// Load game data after initialization
-			demoData = Saver.Load<DemoData> ( fileName );
-
+			demoData = Saver.Load<DemoData> (fileName);
 		}
 
-		void Saver_OnLoaded ( object obj )
+		void Saver_OnLoaded (object obj)
 		{
-			Debug.Log ( "Loaded Successfully: " + obj.ToString () );
+			Debug.Log ("Loaded Successfully: " + obj.ToString ());
 		}
 
-		void Saver_OnSaved ( object obj )
+		void Saver_OnSaved (object obj)
 		{
-			Debug.Log ( "Saved Succesfully: " + obj.ToString () );
+			Debug.Log ("Saved Succesfully: " + obj.ToString ());
 		}
 
 		void OnGUI ()
 		{
-			GUILayout.Label ( "This will get saved automatically when you change or input." );
-			if ( GUILayout.Button ( string.Format ( "Click Count: {0}", demoData.clickCount ) ) )
-			{
+			GUILayout.Label ("This will get saved automatically when you change or input.");
+			if (GUILayout.Button (string.Format ("Click Count: {0}", demoData.clickCount))) {
 				demoData.clickCount++;
 			}
-			demoData.yourName = GUILayout.TextField ( demoData.yourName );
-			if ( GUILayout.Button ( "Save" ) )
-			{
+			demoData.yourName = GUILayout.TextField (demoData.yourName);
+			if (GUILayout.Button ("Save")) {
 				// Save the game data
-				Saver.Save ( demoData, fileName );
+				Saver.Save (demoData, fileName);
 			}
-			if ( GUILayout.Button ( "Load" ) )
-			{
+			if (GUILayout.Button ("Load")) {
 				// Load the game data
-				demoData = Saver.Load<DemoData> ( fileName );
+				demoData = Saver.Load<DemoData> (fileName);
 			}
-			if ( GUILayout.Button ( "Reload" ) )
-			{
-				Application.LoadLevel ( Application.loadedLevel );
+			if (GUILayout.Button ("Reload")) {
+				Application.LoadLevel (Application.loadedLevel);
 			}
 		}
 

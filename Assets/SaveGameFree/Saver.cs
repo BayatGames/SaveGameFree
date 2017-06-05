@@ -432,7 +432,7 @@ namespace SaveGameFree
 					break;
 				case FormatType.XML:
 					FileExtension = DEFAULT_XML_EXTENSION;
-					Serializer = new XmlSerializer ();
+					Serializer = new SaveGameFreeXmlSerializer ();
 					break;
 			}
 			if ( serializer != null )

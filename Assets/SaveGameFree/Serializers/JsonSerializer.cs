@@ -21,25 +21,15 @@ namespace SaveGameFree.Serializers
 		/// </summary>
 		/// <param name="obj">Object.</param>
 		/// <param name="filePath">File path.</param>
-		public void Serialize ( object obj, string filePath )
+		public void Serialize (object obj, string filePath)
 		{
-			string data = JsonUtility.ToJson ( obj );
-			try
-			{
-				if ( !File.Exists ( filePath ) )
-				{
-					File.Create ( filePath );
-				}
-				else
-				{
-					byte [] bytes = Encoding.UTF8.GetBytes ( data );
-					data = Convert.ToBase64String ( bytes );
-					File.WriteAllText ( filePath, data );
-				}
-			}
-			catch ( Exception ex )
-			{
-				Debug.LogException ( ex );
+			string data = JsonUtility.ToJson (obj);
+			try {
+				byte[] bytes = Encoding.UTF8.GetBytes (data);
+				data = Convert.ToBase64String (bytes);
+				File.WriteAllText (filePath, data);
+			} catch (Exception ex) {
+				Debug.LogException (ex);
 			}
 		}
 
@@ -47,20 +37,18 @@ namespace SaveGameFree.Serializers
 		/// Deserialize object from the specified filePath.
 		/// </summary>
 		/// <param name="filePath">File path.</param>
-		public T Deserialize<T> ( string filePath )
+		public T Deserialize<T> (string filePath)
 		{
-			try
-			{
-				string fileContents = File.ReadAllText ( filePath );
-				byte [] bytes = Convert.FromBase64String ( fileContents );
-				fileContents = Encoding.UTF8.GetString ( bytes );
-				return JsonUtility.FromJson<T> ( fileContents );
+			T result = default(T);
+			try {
+				string fileContents = File.ReadAllText (filePath);
+				byte[] bytes = Convert.FromBase64String (fileContents);
+				fileContents = Encoding.UTF8.GetString (bytes);
+				result = JsonUtility.FromJson<T> (fileContents);
+			} catch (Exception ex) {
+				Debug.LogException (ex);
 			}
-			catch ( Exception ex )
-			{
-				Debug.LogException ( ex );
-			}
-			return default(T);
+			return result;
 		}
 
 		#endregion

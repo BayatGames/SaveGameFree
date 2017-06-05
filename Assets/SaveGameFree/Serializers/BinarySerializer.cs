@@ -21,38 +21,34 @@ namespace SaveGameFree.Serializers
 		/// </summary>
 		/// <param name="obj">Object.</param>
 		/// <param name="filePath">File path.</param>
-		public void Serialize ( object obj, string filePath )
+		public void Serialize (object obj, string filePath)
 		{
-			FileStream file = File.Create ( filePath );
-			try
-			{
+			FileStream file = File.Create (filePath);
+			try {
 				BinaryFormatter binaryFormatter = new BinaryFormatter ();
-				binaryFormatter.Serialize ( file, obj );
+				binaryFormatter.Serialize (file, obj);
+			} catch (Exception ex) {
+				Debug.LogException (ex);
 			}
-			catch ( Exception ex )
-			{
-				Debug.LogException ( ex );
-			}
+			file.Close ();
 		}
 
 		/// <summary>
 		/// Deserialize object from the specified filePath.
 		/// </summary>
 		/// <param name="filePath">File path.</param>
-		public T Deserialize<T> ( string filePath )
+		public T Deserialize<T> (string filePath)
 		{
-			FileStream file = File.OpenRead ( filePath );
-			T obj = default(T);
-			try
-			{
+			FileStream file = File.OpenRead (filePath);
+			T result = default(T);
+			try {
 				BinaryFormatter binaryFormatter = new BinaryFormatter ();
-				obj = (T)binaryFormatter.Deserialize ( file );
+				result = (T)binaryFormatter.Deserialize (file);
+			} catch (Exception ex) {
+				Debug.LogException (ex);
 			}
-			catch ( Exception ex )
-			{
-				Debug.LogException ( ex );
-			}
-			return obj;
+			file.Close ();
+			return result;
 		}
 
 		#endregion
