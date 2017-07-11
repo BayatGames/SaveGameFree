@@ -1,9 +1,13 @@
 # Save Game Free
+
 Hi Awesome Visitor.
 
 Save Game Free is a free and simple but powerful solution for saving and loading game data in unity.
 
+[:heart: Any contribution is Welcome](https://github.com/EmpireAssets/SaveGameFree/blob/master/CONTRIBUTING.md)
+
 ## Features
+
 The Save Game Free has some features that might be useful for you:
 - Cross Platform (Windows, Mac, Linux, Android, iOS, Tizen, ...) but WebGL not supported. (You can get Full cross platform support by [Save Game Pro](https://github.com/EmpireAssets/SaveGamePro/) and with WebGL support)
 - Easy to use
@@ -14,6 +18,7 @@ The Save Game Free has some features that might be useful for you:
 - Custom Serialization Support ([Read More](https://github.com/EmpireAssets/SaveGameFree/wiki/How-to-Create-Custom-Serializer%3F))
 
 ## Download
+
 [:sparkles: Download from Asset Store](https://www.assetstore.unity3d.com/#!/content/81519)
 
 Or
@@ -29,9 +34,11 @@ Or
 [:fire: Download the Source Code](https://github.com/EmpireAssets/SaveGameFree/archive/master.zip)
 
 ## Getting Started
+
 Let me give a simple example.
 
 It is our **GameData** class that contains the game data we want to save, such as score, achievements, ...
+
 ```csharp
 using System.Collections;
 using System.Collections.Generic;
@@ -45,7 +52,9 @@ public class GameData {
 
 }
 ```
+
 Then we use our **GameData** class to do save and load functionally as below:
+
 ```csharp
 using System.Collections;
 using System.Collections.Generic;
@@ -82,9 +91,11 @@ public class GameDataManager : MonoBehaviour {
 
 }
 ```
+
 All done now this class will load game data on start and saves it on exit. thats what we want to implement.
 
 ## Resources
+
 [:book: Examples](https://github.com/EmpireAssets/SaveGameFree/wiki/Examples)
 
 [:sparkles: Write Review](https://www.assetstore.unity3d.com/#!/content/81519)
@@ -93,7 +104,10 @@ All done now this class will load game data on start and saves it on exit. thats
 
 [:rocket: Development Board](https://trello.com/b/lg9h77j9/empireassets-packages)
 
+[:heart: Contribute to us](https://github.com/EmpireAssets/SaveGameFree/blob/master/CONTRIBUTING.md)
+
 ## Follow Us
+
 [Telegram](t.me/empireassets)
 
 [Slack](https://empireassets.slack.com)
@@ -111,6 +125,7 @@ All done now this class will load game data on start and saves it on exit. thats
 Thanks.
 
 ## License
+
 MIT @ [Bayat](https://github.com/EmpireWorld)
 
 Made with :heart: by [Bayat](https://github.com/EmpireWorld)
