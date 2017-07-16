@@ -4,34 +4,28 @@ Hi Awesome Visitor.
 
 Save Game Free is a free and simple but powerful solution for saving and loading game data in unity.
 
-[:heart: Any contribution is Welcome](https://github.com/EmpireAssets/SaveGameFree/blob/master/CONTRIBUTING.md)
+[:heart: Any contribution is Welcome](https://github.com/BayatGames/SaveGameFree/blob/master/CONTRIBUTING.md)
 
 ## Features
 
 The Save Game Free has some features that might be useful for you:
-- Cross Platform (Windows, Mac, Linux, Android, iOS, Tizen, ...) but WebGL not supported. (You can get Full cross platform support by [Save Game Pro](https://github.com/EmpireAssets/SaveGamePro/) and with WebGL support)
+- Cross Platform (Windows, Mac, Linux, Android, iOS, Tizen, ...) but WebGL not supported. (You can get Full cross platform support by [Save Game Pro](https://github.com/BayatGames/SaveGamePro/) and with WebGL support)
 - Easy to use
 - Free to use
 - Open Source (You can fork and create it again!)
 - Simple but Powerful
 - Built-in JSON, XML and Binary Serialization support
-- Custom Serialization Support ([Read More](https://github.com/EmpireAssets/SaveGameFree/wiki/How-to-Create-Custom-Serializer%3F))
+- Custom Serialization Support ([Read More](https://github.com/BayatGames/SaveGameFree/wiki/How-to-Create-Custom-Serializer%3F))
 
 ## Download
 
 [:sparkles: Download from Asset Store](https://www.assetstore.unity3d.com/#!/content/81519)
 
-Or
-
 [:moneybag: Download from itch.io](https://bayat.itch.io/save-game-free)
 
-Or
+[:rocket: Download the latest version from the Releases section](https://github.com/BayatGames/SaveGameFree/releases/latest)
 
-[:rocket: Download the latest version from the Releases section](https://github.com/EmpireAssets/SaveGameFree/releases/latest)
-
-Or
-
-[:fire: Download the Source Code](https://github.com/EmpireAssets/SaveGameFree/archive/master.zip)
+[:fire: Download the Source Code](https://github.com/BayatGames/SaveGameFree/archive/master.zip)
 
 ## Getting Started
 
@@ -96,36 +90,38 @@ All done now this class will load game data on start and saves it on exit. thats
 
 ## Resources
 
-[:book: Examples](https://github.com/EmpireAssets/SaveGameFree/wiki/Examples)
+[:book: Examples](https://github.com/BayatGames/SaveGameFree/wiki/Examples)
 
 [:sparkles: Write Review](https://www.assetstore.unity3d.com/#!/content/81519)
 
 [:fire: Community Thread](https://forum.unity3d.com/threads/released-empireassets-save-game-free.457658/)
 
-[:rocket: Development Board](https://trello.com/b/lg9h77j9/empireassets-packages)
+[:heart: Contribute to us](https://github.com/BayatGames/SaveGameFree/blob/master/CONTRIBUTING.md)
 
-[:heart: Contribute to us](https://github.com/EmpireAssets/SaveGameFree/blob/master/CONTRIBUTING.md)
+## Follow US
 
-## Follow Us
+[:notebook: Check out our development board](https://trello.com/bayatgames)
 
-[Telegram](t.me/empireassets)
+[Medium Publication](https://medium.com/bayat-games)
 
-[Slack](https://empireassets.slack.com)
+[Telegram Channel](https://t.me/BayatGamesOfficial)
 
-[Gitter](https://gitter.im/EmpireAssets/Lobby)
+[Slack Team](https://bayatgames.slack.com)
 
-[Google Group](https://groups.google.com/forum/#!forum/empireassets)
-
-[Google+](https://plus.google.com/communities/108974587311747022650)
-
-[Facebook](https://www.facebook.com/EmpireAssets-277386306024083/)
+[Gitter Channel](https://gitter.im/BayatGames)
 
 [Twitter (Hasan Bayat)](https://www.twitter.com/EmpireWorld1393)
 
-Thanks.
+[Google Group](https://groups.google.com/forum/#!forum/bayatgames)
+
+[Google+ Community](https://plus.google.com/communities/108974587311747022650)
+
+[Facebook Page](https://www.facebook.com/Bayat-Games-277386306024083)
+
+[:e-mail: Email us (hasanbayat1393@gmail.com)](mailto:hasanbayat1393@gmail.com)
 
 ## License
 
-MIT @ [Bayat](https://github.com/EmpireWorld)
+MIT @ [Bayat Games](https://github.com/BayatGames)
 
-Made with :heart: by [Bayat](https://github.com/EmpireWorld)
+Made with :heart: by [Bayat Games](https://github.com/BayatGames)
