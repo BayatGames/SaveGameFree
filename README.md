@@ -69,6 +69,8 @@ public class SimpleUsage : MonoBehaviour {
 
 [:heart: Contribute to us](https://github.com/BayatGames/SaveGameFree/blob/master/CONTRIBUTING.md)
 
+[:rocket: Add your Game to our Showcase](https://github.com/BayatGames/SaveGameFree/wiki/Showcase)
+
 ## Follow US
 
 [:notebook: Check out our development board](https://trello.com/bayatgames)
