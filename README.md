@@ -4,6 +4,10 @@ Save Game Free is a free and simple but powerful solution for saving and loading
 
 [:rocket: Get Save Game Pro](https://github.com/EmpireAssets/SaveGamePro/)
 
+<p align="center">
+	<img src="https://raw.githubusercontent.com/BayatGames/SaveGameFree/master/Assets/SaveGameFree/PressKit/Unity%20Package%20Key%20Images%20-%20Large-01.png" alt="Save Game Free Logo" />
+</p>
+
 ## Features
 
 The below features made Save Game Free excellent:
