@@ -24,6 +24,7 @@ namespace BayatGames.SaveGameFree.Encoders
 		/// <param name="password">Password.</param>
 		public string Encode ( string input, string password )
 		{
+			#if !UNITY_WSA || !UNITY_WINRT
 			var saltStringBytes = Generate256BitsOfRandomEntropy ();
 			var ivStringBytes = Generate256BitsOfRandomEntropy ();
 			var plainTextBytes = Encoding.UTF8.GetBytes ( input );
@@ -52,6 +53,9 @@ namespace BayatGames.SaveGameFree.Encoders
 					}
 				}
 			}
+			#else
+			return Convert.ToBase64String ( Encoding.UTF8.GetBytes ( input ) );
+			#endif
 		}
 
 		/// <summary>
@@ -61,6 +65,7 @@ namespace BayatGames.SaveGameFree.Encoders
 		/// <param name="password">Password.</param>
 		public string Decode ( string input, string password )
 		{
+			#if !UNITY_WSA || !UNITY_WINRT
 			var cipherTextBytesWithSaltAndIv = Convert.FromBase64String ( input );
 			var saltStringBytes = cipherTextBytesWithSaltAndIv.Take ( Keysize / 8 ).ToArray ();
 			var ivStringBytes = cipherTextBytesWithSaltAndIv.Skip ( Keysize / 8 ).Take ( Keysize / 8 ).ToArray ();
@@ -87,8 +92,12 @@ namespace BayatGames.SaveGameFree.Encoders
 					}
 				}
 			}
+			#else
+			return Encoding.UTF8.GetString ( Convert.FromBase64String ( input ) );
+			#endif
 		}
 
+		#if !UNITY_WSA || !UNITY_WINRT
 		private static byte[] Generate256BitsOfRandomEntropy ()
 		{
 			var randomBytes = new byte[32];
@@ -96,6 +105,7 @@ namespace BayatGames.SaveGameFree.Encoders
 			rngCsp.GetBytes ( randomBytes );
 			return randomBytes;
 		}
+		#endif
 
 	}
 

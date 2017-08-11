@@ -1,6 +1,10 @@
 ﻿using System;
 using System.IO;
-using FullSerializer;
+
+#if !UNITY_WSA || !UNITY_WINRT
+using System.Runtime.Serialization.Formatters.Binary;
+#endif
+
 using System.Text;
 using UnityEngine;
 
@@ -8,9 +12,9 @@ namespace BayatGames.SaveGameFree.Serializers
 {
 
 	/// <summary>
-	/// Save Game Json Serializer.
+	/// Save Game Binary Serializer.
 	/// </summary>
-	public class SaveGameJsonSerializer : ISaveGameSerializer
+	public class SaveGameBinarySerializer : ISaveGameSerializer
 	{
 
 		/// <summary>
@@ -22,19 +26,19 @@ namespace BayatGames.SaveGameFree.Serializers
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
 		public void Serialize<T> ( T obj, Stream stream, Encoding encoding )
 		{
+			#if !UNITY_WSA || !UNITY_WINRT
 			try
 			{
-				StreamWriter writer = new StreamWriter ( stream, encoding );
-				fsSerializer serializer = new fsSerializer ();
-				fsData data = new fsData ();
-				serializer.TrySerialize ( obj, out data );
-				writer.Write ( fsJsonPrinter.CompressedJson ( data ) );
-				writer.Close ();
+				BinaryFormatter formatter = new BinaryFormatter ();
+				formatter.Serialize ( stream, obj );
 			}
 			catch ( Exception ex )
 			{
 				Debug.LogException ( ex );
 			}
+			#else
+			Debug.LogError ( "SaveGameFree: The Binary Serialization isn't supported in Windows Store and UWP." );
+			#endif
 		}
 
 		/// <summary>
@@ -46,22 +50,19 @@ namespace BayatGames.SaveGameFree.Serializers
 		public T Deserialize<T> ( Stream stream, Encoding encoding )
 		{
 			T result = default(T);
+			#if !UNITY_WSA || !UNITY_WINRT
 			try
 			{
-				StreamReader reader = new StreamReader ( stream, encoding );
-				fsSerializer serializer = new fsSerializer ();
-				fsData data = fsJsonParser.Parse ( reader.ReadToEnd () );
-				serializer.TryDeserialize ( data, ref result );
-				if ( result == null )
-				{
-					result = default(T);
-				}
-				reader.Close ();
+				BinaryFormatter formatter = new BinaryFormatter ();
+				result = ( T )formatter.Deserialize ( stream );
 			}
 			catch ( Exception ex )
 			{
 				Debug.LogException ( ex );
 			}
+			#else
+			Debug.LogError ( "SaveGameFree: The Binary Serialization isn't supported in Windows Store and UWP." );
+			#endif
 			return result;
 		}
 

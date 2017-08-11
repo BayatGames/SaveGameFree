@@ -538,7 +538,6 @@ namespace BayatGames.SaveGameFree
 				}
 				MemoryStream memoryStream = new MemoryStream ( Encoding.GetBytes ( data ) );
 				result = Serializer.Deserialize<T> ( memoryStream, Encoding );
-				memoryStream.Close ();
 				memoryStream.Dispose ();
 				if ( result == null )
 				{
@@ -577,11 +576,19 @@ namespace BayatGames.SaveGameFree
 			}
 			m_Request = UnityWebRequest.Post ( URL, formFields );
 			yield return m_Request.Send ();
+			#if UNITY_2017_1_OR_NEWER
 			if ( m_Request.isNetworkError || m_Request.isHttpError )
 			{
 				m_IsError = true;
 				m_Error = m_Request.error;
 			}
+			#else
+			if ( m_Request.isError )
+			{
+				m_IsError = true;
+				m_Error = m_Request.error;
+			}
+			#endif
 			else if ( m_Request.downloadHandler.text.StartsWith ( "Error" ) )
 			{
 				m_IsError = true;

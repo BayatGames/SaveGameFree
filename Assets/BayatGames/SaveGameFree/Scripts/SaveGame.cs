@@ -296,6 +296,10 @@ namespace BayatGames.SaveGameFree
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
 		public static void Save<T> ( string identifier, T obj, bool encode, string password, ISaveGameSerializer serializer, ISaveGameEncoder encoder, Encoding encoding, SaveGamePath path )
 		{
+			if ( string.IsNullOrEmpty ( identifier ) )
+			{
+				throw new System.ArgumentNullException ( "identifier" );
+			}
 			if ( serializer == null )
 			{
 				serializer = SaveGame.Serializer;
@@ -387,7 +391,6 @@ namespace BayatGames.SaveGameFree
 				PlayerPrefs.SetString ( filePath, data );
 				PlayerPrefs.Save ();
 			}
-			stream.Close ();
 			stream.Dispose ();
 			if ( SaveCallback != null )
 			{
@@ -437,25 +440,14 @@ namespace BayatGames.SaveGameFree
 		}
 
 		/// <summary>
-		/// Load the specified identifier and encode.
-		/// </summary>
-		/// <param name="identifier">Identifier.</param>
-		/// <param name="encode">If set to <c>true</c> encode.</param>
-		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static T Load<T> ( string identifier, bool encode )
-		{
-			return Load<T> ( identifier, default(T), encode, EncodePassword, Serializer, Encoder, DefaultEncoding, SavePath );
-		}
-
-		/// <summary>
 		/// Load the specified identifier and encodePassword.
 		/// </summary>
 		/// <param name="identifier">Identifier.</param>
 		/// <param name="encodePassword">Encode password.</param>
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static T Load<T> ( string identifier, string encodePassword )
+		public static T Load<T> ( string identifier, bool encode, string encodePassword )
 		{
-			return Load<T> ( identifier, default(T), Encode, encodePassword, Serializer, Encoder, DefaultEncoding, SavePath );
+			return Load<T> ( identifier, default(T), encode, encodePassword, Serializer, Encoder, DefaultEncoding, SavePath );
 		}
 
 		/// <summary>
@@ -588,6 +580,10 @@ namespace BayatGames.SaveGameFree
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
 		public static T Load<T> ( string identifier, T defaultValue, bool encode, string password, ISaveGameSerializer serializer, ISaveGameEncoder encoder, Encoding encoding, SaveGamePath path )
 		{
+			if ( string.IsNullOrEmpty ( identifier ) )
+			{
+				throw new System.ArgumentNullException ( "identifier" );
+			}
 			if ( serializer == null )
 			{
 				serializer = SaveGame.Serializer;
@@ -595,6 +591,10 @@ namespace BayatGames.SaveGameFree
 			if ( encoding == null )
 			{
 				encoding = SaveGame.DefaultEncoding;
+			}
+			if ( defaultValue == null )
+			{
+				defaultValue = default(T);
 			}
 			T result = defaultValue;
 			string filePath = "";
@@ -618,7 +618,7 @@ namespace BayatGames.SaveGameFree
 			#if !UNITY_SAMSUNGTV && !UNITY_TVOS && !UNITY_WEBGL
 			if ( !Exists ( filePath, path ) )
 			#else
-			if ( !Exists ( identifier, path ) )
+			if ( !Exists ( filePath, path ) )
 			#endif
 			{
 				Debug.LogWarningFormat (
@@ -673,7 +673,6 @@ namespace BayatGames.SaveGameFree
 				#endif
 			}
 			result = serializer.Deserialize <T> ( stream, encoding );
-			stream.Close ();
 			stream.Dispose ();
 			if ( result == null )
 			{
@@ -726,6 +725,10 @@ namespace BayatGames.SaveGameFree
 		/// <param name="webURL">Web URL.</param>
 		public static bool Exists ( string identifier, SaveGamePath path )
 		{
+			if ( string.IsNullOrEmpty ( identifier ) )
+			{
+				throw new System.ArgumentNullException ( "identifier" );
+			}
 			string filePath = "";
 			if ( !IsFilePath ( identifier ) )
 			{
@@ -747,11 +750,21 @@ namespace BayatGames.SaveGameFree
 			#if !UNITY_SAMSUNGTV && !UNITY_TVOS && !UNITY_WEBGL
 			if ( IOSupported () )
 			{
+				bool exists = false;
 				#if UNITY_WSA || UNITY_WINRT
-				return UnityEngine.Windows.File.Exists ( filePath );
+				exists = UnityEngine.Windows.Directory.Exists ( filePath );
 				#else
-				return File.Exists ( identifier );
+				exists = Directory.Exists ( filePath );
 				#endif
+				if ( !exists )
+				{
+					#if UNITY_WSA || UNITY_WINRT
+					exists = UnityEngine.Windows.File.Exists ( filePath );
+					#else
+					exists = File.Exists ( filePath );
+					#endif
+				}
+				return exists;
 			}
 			else
 			{
@@ -759,6 +772,137 @@ namespace BayatGames.SaveGameFree
 			}
 			#else
 			return PlayerPrefs.HasKey ( filePath );
+			#endif
+		}
+
+		/// <summary>
+		/// Delete the specified identifier.
+		/// </summary>
+		/// <param name="identifier">Identifier.</param>
+		public static void Delete ( string identifier )
+		{
+			Delete ( identifier, SavePath );
+		}
+
+		/// <summary>
+		/// Delete the specified identifier and path.
+		/// </summary>
+		/// <param name="identifier">Identifier.</param>
+		/// <param name="path">Path.</param>
+		public static void Delete ( string identifier, SaveGamePath path )
+		{
+			if ( string.IsNullOrEmpty ( identifier ) )
+			{
+				throw new System.ArgumentNullException ( "identifier" );
+			}
+			string filePath = "";
+			if ( !IsFilePath ( identifier ) )
+			{
+				switch ( path )
+				{
+					default:
+					case SaveGamePath.PersistentDataPath:
+						filePath = string.Format ( "{0}/{1}", Application.persistentDataPath, identifier );
+						break;
+					case SaveGamePath.DataPath:
+						filePath = string.Format ( "{0}/{1}", Application.dataPath, identifier );
+						break;
+				}
+			}
+			else
+			{
+				filePath = identifier;
+			}
+			if ( !Exists ( filePath, path ) )
+			{
+				return;
+			}
+			#if !UNITY_SAMSUNGTV && !UNITY_TVOS && !UNITY_WEBGL
+			if ( IOSupported () )
+			{
+				#if UNITY_WSA || UNITY_WINRT
+				UnityEngine.Windows.File.Delete ( filePath );
+				#else
+				File.Delete ( filePath );
+				#endif
+			}
+			else
+			{
+				PlayerPrefs.DeleteKey ( filePath );
+			}
+			#else
+			PlayerPrefs.DeleteKey ( filePath );
+			#endif
+		}
+
+		/// <summary>
+		/// Clear this instance.
+		/// Alias of DeleteAll
+		/// </summary>
+		public static void Clear ()
+		{
+			DeleteAll ( SavePath );
+		}
+
+		/// <summary>
+		/// Clear the specified path.
+		/// Alias of DeleteAll
+		/// </summary>
+		/// <param name="path">Path.</param>
+		public static void Clear ( SaveGamePath path )
+		{
+			DeleteAll ( path );
+		}
+
+		/// <summary>
+		/// Deletes all.
+		/// </summary>
+		public static void DeleteAll ()
+		{
+			DeleteAll ( SavePath );
+		}
+
+		/// <summary>
+		/// Deletes all.
+		/// </summary>
+		/// <param name="path">Path.</param>
+		public static void DeleteAll ( SaveGamePath path )
+		{
+			string dirPath = "";
+			switch ( path )
+			{
+				case SaveGamePath.PersistentDataPath:
+					dirPath = Application.persistentDataPath;
+					break;
+				case SaveGamePath.DataPath:
+					dirPath = Application.dataPath;
+					break;
+			}
+			#if !UNITY_SAMSUNGTV && !UNITY_TVOS && !UNITY_WEBGL
+			if ( IOSupported () )
+			{
+				#if UNITY_WSA || UNITY_WINRT
+				UnityEngine.Windows.Directory.Delete ( dirPath );
+				#else
+				DirectoryInfo info = new DirectoryInfo ( dirPath );
+				FileInfo [] files = info.GetFiles ();
+				for ( int i = 0; i < files.Length; i++ )
+				{
+					files [ i ].Delete ();
+				}
+				DirectoryInfo [] dirs = info.GetDirectories ();
+				for ( int i = 0; i < dirs.Length; i++ )
+				{
+					dirs [ i ].Delete ( true );
+				}
+				#endif
+			}
+			else
+			{
+				PlayerPrefs.DeleteAll ();
+			}
+			#else
+			PlayerPrefs.DeleteAll ();
 			#endif
 		}
 
