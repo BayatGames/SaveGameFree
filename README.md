@@ -65,43 +65,15 @@ public class SimpleUsage : MonoBehaviour {
 
 [:sparkles: Write Review](https://www.assetstore.unity3d.com/#!/content/81519)
 
+[:star: Check out Save Game Pro](https://github.com/EmpireAssets/SaveGamePro/)
+
 [:fire: Community Thread](https://forum.unity3d.com/threads/released-empireassets-save-game-free.457658/)
 
 [:heart: Contribute to us](https://github.com/BayatGames/SaveGameFree/blob/master/CONTRIBUTING.md)
 
 [:rocket: Add your Game to our Showcase](https://github.com/BayatGames/SaveGameFree/wiki/Showcase)
 
-## Follow US
-
-[:notebook: Check out our development board](https://trello.com/bayatgames)
-
-[Medium Publication](https://medium.com/bayat-games)
-
-[Telegram Channel](https://t.me/BayatGamesOfficial)
-
-[Slack Team](https://bayatgames.slack.com)
-
-[Gitter Channel](https://gitter.im/BayatGames)
-
-[Twitter (Hasan Bayat)](https://www.twitter.com/EmpireWorld1393)
-
-[Google Group](https://groups.google.com/forum/#!forum/bayatgames)
-
-[Google+ Community](https://plus.google.com/communities/108974587311747022650)
-
-[Facebook Page](https://www.facebook.com/Bayat-Games-277386306024083)
-
-[Twitch.tv](https://www.twitch.tv/bayatgames)
-
-[Tumblr](https://bayatgames.tumblr.com)
-
-[Discord](https://discordapp.com/channels/307041709701988352/307041709701988352)
-
-[YouTube](https://www.youtube.com/channel/UCDLJbvqDKJyBKU2E8TMEQpQ)
-
-[Reddit](https://www.reddit.com/r/bayatgames)
-
-[:e-mail: Email us (hasanbayat1393@gmail.com)](mailto:hasanbayat1393@gmail.com)
+[:newspaper: Support and News](https://github.com/BayatGames/Support)
 
 ## License
 
