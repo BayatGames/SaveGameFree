@@ -21,7 +21,7 @@ The below features made Save Game Free excellent:
 
 ## Download
 
-[:sparkles: Download from Asset Store](https://www.assetstore.unity3d.com/#!/content/81519)
+[:sparkles: Download from Asset Store](https://www.assetstore.unity3d.com/#!/content/81519?aid=1101l3ncK)
 
 [:moneybag: Download from itch.io](https://bayat.itch.io/save-game-free)
 
