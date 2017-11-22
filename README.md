@@ -61,6 +61,8 @@ public class SimpleUsage : MonoBehaviour {
 
 ## Resources
 
+[:book: Documentation](https://bayatgames.com/docs/save-game-free/)
+
 [:book: Examples](https://github.com/BayatGames/SaveGameFree/wiki/Examples)
 
 [:sparkles: Write Review](https://www.assetstore.unity3d.com/#!/content/81519)
