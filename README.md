@@ -2,6 +2,8 @@
 
 Save Game Free is a free and simple but powerful solution for saving and loading game data in Unity Game Engine.
 
+<a href="https://www.patreon.com/bePatron?u=7703593" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
+
 [:rocket: Get Save Game Pro](https://github.com/EmpireAssets/SaveGamePro/)
 
 <p align="center">
@@ -63,17 +65,13 @@ public class SimpleUsage : MonoBehaviour {
 
 [:book: Documentation](https://bayatgames.com/docs/save-game-free/)
 
-[:book: Examples](https://github.com/BayatGames/SaveGameFree/wiki/Examples)
+[:rocket: Patreon](https://www.patreon.com/BayatGames)
 
 [:sparkles: Write Review](https://www.assetstore.unity3d.com/#!/content/81519)
 
 [:star: Check out Save Game Pro](https://github.com/EmpireAssets/SaveGamePro/)
 
-[:fire: Community Thread](https://forum.unity3d.com/threads/released-empireassets-save-game-free.457658/)
-
-[:heart: Contribute to us](https://github.com/BayatGames/SaveGameFree/blob/master/CONTRIBUTING.md)
-
-[:rocket: Add your Game to our Showcase](https://github.com/BayatGames/SaveGameFree/wiki/Showcase)
+[:fire: Forum Thread](https://forum.unity3d.com/threads/released-empireassets-save-game-free.457658/)
 
 [:newspaper: Support and News](https://github.com/BayatGames/Support)
 
