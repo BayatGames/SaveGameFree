@@ -2,8 +2,6 @@
 
 Save Game Free is a free and simple but powerful solution for saving and loading game data in Unity Game Engine.
 
-<a href="https://www.patreon.com/bePatron?u=7703593" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
-
 [:rocket: Get Save Game Pro](https://github.com/EmpireAssets/SaveGamePro/)
 
 <p align="center">
