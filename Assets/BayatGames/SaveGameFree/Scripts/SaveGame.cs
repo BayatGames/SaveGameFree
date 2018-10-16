@@ -364,7 +364,7 @@ namespace BayatGames.SaveGameFree
             serializer.Serialize(obj, stream, encoding);
             if (encode)
             {
-                string data = encoding.GetString(((MemoryStream)stream).ToArray());
+                string data = System.Convert.ToBase64String(((MemoryStream)stream).ToArray());
                 string encoded = encoder.Encode(data, password);
 #if !UNITY_SAMSUNGTV && !UNITY_TVOS && !UNITY_WEBGL
                 if (IOSupported())
@@ -649,7 +649,7 @@ namespace BayatGames.SaveGameFree
 				data = PlayerPrefs.GetString ( filePath );
 #endif
                 string decoded = encoder.Decode(data, password);
-                stream = new MemoryStream(encoding.GetBytes(decoded), true);
+                stream = new MemoryStream(System.Convert.FromBase64String(decoded), true);
             }
             else
             {

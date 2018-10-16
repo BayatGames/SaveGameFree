@@ -7,47 +7,67 @@ using BayatGames.SaveGameFree.Types;
 namespace BayatGames.SaveGameFree.Examples
 {
 
-	public class ExampleSavePosition : MonoBehaviour
-	{
+    [System.Serializable]
+    public class StorageSG
+    {
+        public System.DateTime myDateTime;
 
-		public Transform target;
-		public bool loadOnStart = true;
-		public string identifier = "exampleSavePosition.dat";
+        public StorageSG()
+        {
+            myDateTime = System.DateTime.UtcNow;
+        }
+    }
 
-		void Start ()
-		{
-			if ( loadOnStart )
-			{
-				Load ();
-			}
-		}
+    public class ExampleSavePosition : MonoBehaviour
+    {
+        private string _encodePassword;
 
-		void Update ()
-		{
-			Vector3 newPosition = target.position;
-			newPosition.x += Input.GetAxis ( "Horizontal" );
-			newPosition.y += Input.GetAxis ( "Vertical" );
-			target.position = newPosition;
-		}
+        public Transform target;
+        public bool loadOnStart = true;
+        public string identifier = "exampleSavePosition.dat";
 
-		void OnApplicationQuit ()
-		{
-			Save ();
-		}
+        void Start()
+        {
+            _encodePassword = "12345678910abcdef12345678910abcdef";
+            SaveGame.EncodePassword = _encodePassword;
+            SaveGame.Encode = true;
+            SaveGame.Serializer = new SaveGameFree.Serializers.SaveGameBinarySerializer();
+            StorageSG ssg = new StorageSG();
+            SaveGame.Save<StorageSG>("pizza2", ssg);
+            StorageSG ssgLoaded = SaveGame.Load<StorageSG>("pizza2");
+            Debug.Log(ssgLoaded.myDateTime.ToLocalTime().ToString());
+            if (loadOnStart)
+            {
+                Load();
+            }
+        }
 
-		public void Save ()
-		{
-			SaveGame.Save<Vector3Save> ( identifier, target.position, SerializerDropdown.Singleton.ActiveSerializer );
-		}
+        void Update()
+        {
+            Vector3 newPosition = target.position;
+            newPosition.x += Input.GetAxis("Horizontal");
+            newPosition.y += Input.GetAxis("Vertical");
+            target.position = newPosition;
+        }
 
-		public void Load ()
-		{
-			target.position = SaveGame.Load<Vector3Save> (
-				identifier,
-				Vector3.zero,
-				SerializerDropdown.Singleton.ActiveSerializer );
-		}
+        void OnApplicationQuit()
+        {
+            Save();
+        }
 
-	}
+        public void Save()
+        {
+            SaveGame.Save<Vector3Save>(identifier, target.position, SerializerDropdown.Singleton.ActiveSerializer);
+        }
+
+        public void Load()
+        {
+            target.position = SaveGame.Load<Vector3Save>(
+                identifier,
+                Vector3.zero,
+                SerializerDropdown.Singleton.ActiveSerializer);
+        }
+
+    }
 
 }
