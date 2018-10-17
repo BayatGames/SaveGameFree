@@ -23,8 +23,6 @@ The below features made Save Game Free excellent:
 
 [:sparkles: Download from Asset Store](https://www.assetstore.unity3d.com/#!/content/81519?aid=1101l3ncK)
 
-[:moneybag: Download from itch.io](https://bayat.itch.io/save-game-free)
-
 [:rocket: Download the latest version from the Releases section](https://github.com/EmpireAssets/SaveGameFree/releases/latest)
 
 [:fire: Download the Source Code](https://github.com/EmpireAssets/SaveGameFree/archive/master.zip)
