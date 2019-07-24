@@ -821,9 +821,15 @@ namespace BayatGames.SaveGameFree
             if (IOSupported())
             {
 #if UNITY_WSA || UNITY_WINRT
-				UnityEngine.Windows.File.Delete ( filePath );
+                if (UnityEngine.Windows.File.Exists(filePath))
+                    UnityEngine.Windows.File.Delete(filePath);
+                else if (UnityEngine.Windows.Directory.Exists(filePath))
+                    UnityEngine.Windows.Directory.Delete(filePath, true);
 #else
-                File.Delete(filePath);
+                if (File.Exists(filePath))
+                    File.Delete(filePath);
+                else if (Directory.Exists(filePath))
+                    Directory.Delete(filePath, true);
 #endif
             }
             else
