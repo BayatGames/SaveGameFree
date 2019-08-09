@@ -65,7 +65,7 @@ public class SimpleUsage : MonoBehaviour {
 
 [:sparkles: Write Review](https://www.assetstore.unity3d.com/#!/content/81519)
 
-[:star: Check out Save Game Pro](https://github.com/EmpireAssets/SaveGamePro/)
+[:star: Check out Save Game Pro](https://github.com/BayatGames/SaveGamePro/)
 
 [:fire: Forum Thread](https://forum.unity3d.com/threads/released-empireassets-save-game-free.457658/)
 
