@@ -59,7 +59,7 @@ public class SimpleUsage : MonoBehaviour {
 
 ## Resources
 
-[:book: Documentation](https://bayatgames.com/docs/save-game-free/)
+[:book: Documentation](http://docs.bayat.io/savegamefree)
 
 [:rocket: Patreon](https://www.patreon.com/BayatGames)
 
