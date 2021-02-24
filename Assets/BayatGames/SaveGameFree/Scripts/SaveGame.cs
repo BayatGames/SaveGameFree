@@ -1046,7 +1046,9 @@ namespace BayatGames.SaveGameFree
             Application.platform != RuntimePlatform.WSAPlayerARM &&
             Application.platform != RuntimePlatform.WSAPlayerX64 &&
             Application.platform != RuntimePlatform.WSAPlayerX86 &&
+#if !UNITY_2017_3_OR_NEWER
             Application.platform != RuntimePlatform.SamsungTVPlayer &&
+#endif
             Application.platform != RuntimePlatform.tvOS &&
             Application.platform != RuntimePlatform.PS4;
         }
