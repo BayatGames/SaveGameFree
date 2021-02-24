@@ -575,7 +575,12 @@ namespace BayatGames.SaveGameFree
 				formFields.Add ( "password", Password );
 			}
 			m_Request = UnityWebRequest.Post ( URL, formFields );
-			yield return m_Request.Send ();
+			#if UNITY_2017_2_OR_NEWER
+			yield return m_Request.SendWebRequest();
+			#else
+			yield return m_Request.Send();
+			#endif
+			
 			#if UNITY_2017_1_OR_NEWER
 			if ( m_Request.isNetworkError || m_Request.isHttpError )
 			{
