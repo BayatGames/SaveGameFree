@@ -21,7 +21,7 @@ The below features made Save Game Free excellent:
 
 ## Download
 
-[:sparkles: Download from Asset Store](https://www.assetstore.unity3d.com/#!/content/81519?aid=1101l3ncK)
+[:sparkles: Download from Asset Store](https://assetstore.unity.com/packages/tools/input-management/save-game-free-gold-update-81519)
 
 [:rocket: Download the latest version from the Releases section](https://github.com/BayatGames/SaveGameFree/releases/latest)
 
