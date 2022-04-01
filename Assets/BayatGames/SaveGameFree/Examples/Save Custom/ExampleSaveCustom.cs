@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,11 +33,11 @@ namespace BayatGames.SaveGameFree.Examples
 
             public CustomData()
             {
-                score = 0;
-                highScore = 0;
+                this.score = 0;
+                this.highScore = 0;
 
                 // Dummy data
-                levels = new List<Level>() {
+                this.levels = new List<Level>() {
                     new Level ( true, false ),
                     new Level ( false, false ),
                     new Level ( false, true ),
@@ -54,7 +55,7 @@ namespace BayatGames.SaveGameFree.Examples
 
         void Start()
         {
-            if (loadOnStart)
+            if (this.loadOnStart)
             {
                 Load();
             }
@@ -62,27 +63,37 @@ namespace BayatGames.SaveGameFree.Examples
 
         public void SetScore(string score)
         {
-            customData.score = int.Parse(score);
+            this.customData.score = int.Parse(score);
         }
 
         public void SetHighScore(string highScore)
         {
-            customData.highScore = int.Parse(highScore);
+            this.customData.highScore = int.Parse(highScore);
         }
 
         public void Save()
         {
-            SaveGame.Save<CustomData>(identifier, customData, SerializerDropdown.Singleton.ActiveSerializer);
+            SaveGame.Save<CustomData>(this.identifier, this.customData, SerializerDropdown.Singleton.ActiveSerializer);
         }
 
         public void Load()
         {
-            customData = SaveGame.Load<CustomData>(
-                identifier,
+            this.customData = SaveGame.Load<CustomData>(
+                this.identifier,
                 new CustomData(),
                 SerializerDropdown.Singleton.ActiveSerializer);
-            scoreInputField.text = customData.score.ToString();
-            highScoreInputField.text = customData.highScore.ToString();
+            this.scoreInputField.text = this.customData.score.ToString();
+            this.highScoreInputField.text = this.customData.highScore.ToString();
+        }
+
+        public void Delete()
+        {
+            SaveGame.Delete(this.identifier);
+        }
+
+        public void DeleteAll()
+        {
+            SaveGame.DeleteAll();
         }
 
     }
