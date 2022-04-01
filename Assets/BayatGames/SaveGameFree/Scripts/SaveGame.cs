@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+
+using BayatGames.SaveGameFree.Encoders;
+using BayatGames.SaveGameFree.Serializers;
+
 using UnityEngine;
 using UnityEngine.Networking;
-
-using BayatGames.SaveGameFree.Serializers;
-using BayatGames.SaveGameFree.Encoders;
 
 namespace BayatGames.SaveGameFree
 {
@@ -1046,7 +1047,9 @@ namespace BayatGames.SaveGameFree
             Application.platform != RuntimePlatform.WSAPlayerARM &&
             Application.platform != RuntimePlatform.WSAPlayerX64 &&
             Application.platform != RuntimePlatform.WSAPlayerX86 &&
+#if !UNITY_2017_3_OR_NEWER
             Application.platform != RuntimePlatform.SamsungTVPlayer &&
+#endif
             Application.platform != RuntimePlatform.tvOS &&
             Application.platform != RuntimePlatform.PS4;
         }

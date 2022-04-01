@@ -1,0 +1,626 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.3f1 (76626098c1c4) revision 7758432'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19044.1586; Version 2009; 64bit' Language: 'en' Physical Memory: 32696 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\Programs\Unity\2020.3.3f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Projects/Bayat/Unity/SaveGameFree
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+59339
+Successfully changed project path to: D:/Projects/Bayat/Unity/SaveGameFree
+D:/Projects/Bayat/Unity/SaveGameFree
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 73.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.3f1 (76626098c1c4)
+[Subsystems] Discovering subsystems at path D:/Programs/Unity/2020.3.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Projects/Bayat/Unity/SaveGameFree/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c03)
+    Vendor:   
+    VRAM:     6052 MB
+    Driver:   30.0.15.1165
+Initialize mono
+Mono path[0] = 'D:/Programs/Unity/2020.3.3f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Programs/Unity/2020.3.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Programs/Unity/2020.3.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56064
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Programs/Unity/2020.3.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001671 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 57.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.520 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.009081 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.486 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2269 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.5 MB.
+System memory in use after: 89.7 MB.
+
+Unloading 61 unused Assets to reduce memory usage. Loaded Objects now: 2676.
+Total: 7.059400 ms (FindLiveObjects: 0.275400 ms CreateObjectMapping: 0.073700 ms MarkObjects: 6.590500 ms  DeleteObjects: 0.118600 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Custom/Save Custom.unity
+  artifactKey: Guid(4b5988066c069524498be5a3134dc996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Custom/Save Custom.unity using Guid(4b5988066c069524498be5a3134dc996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '051acd41d460162ba82f73fd93940e8c') in 0.016245 seconds
+  Import took 0.020862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000505 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Auto Save
+  artifactKey: Guid(e94645d097f79c441b4ffb5894fb926f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Auto Save using Guid(e94645d097f79c441b4ffb5894fb926f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4a45051791c18ad019312454c7d139d') in 0.003532 seconds
+  Import took 0.007608 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Auto Save/Auto Save.unity
+  artifactKey: Guid(842a06fc98f0d424d8698694c870913b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Auto Save/Auto Save.unity using Guid(842a06fc98f0d424d8698694c870913b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7343e970a3d161149fe0492ead6afde8') in 0.003323 seconds
+  Import took 0.007044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.452130 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Scale
+  artifactKey: Guid(47389b42fc2eee84699ff75effd12202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Scale using Guid(47389b42fc2eee84699ff75effd12202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '381da2b0ca6a720f4b7acae856238df4') in 0.002782 seconds
+  Import took 0.006829 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002633 seconds.
+  path: Assets/BayatGames/SaveGameFree
+  artifactKey: Guid(b854c074ac9dfa547a129a3dd967690b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree using Guid(b854c074ac9dfa547a129a3dd967690b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd7aecc3b2ab04e889c09c7eab94d6d4') in 0.002750 seconds
+  Import took 0.006375 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003331 seconds.
+  path: Assets/BayatGames/SaveGameFree/Plugins/FullSerializer.xml
+  artifactKey: Guid(78f024bdc553e72449bd95735fc74712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Plugins/FullSerializer.xml using Guid(78f024bdc553e72449bd95735fc74712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81abf44dbc16df49b3c41e96f57cfca1') in 0.034162 seconds
+  Import took 0.037871 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002710 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Serializers
+  artifactKey: Guid(1470481300d0a444f880aec996ed1195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Serializers using Guid(1470481300d0a444f880aec996ed1195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '794af78b3624d47a772b7278578e6276') in 0.002708 seconds
+  Import took 0.006244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003585 seconds.
+  path: Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Large-01.png
+  artifactKey: Guid(182673c593d83234b897aa5d3079f421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Large-01.png using Guid(182673c593d83234b897aa5d3079f421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c81f9daff22c7a5978cefa237ff5a76') in 0.125537 seconds
+  Import took 0.129724 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004620 seconds.
+  path: Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Small-01.png
+  artifactKey: Guid(b6333aad48953834c910d18eb46d5fea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Small-01.png using Guid(b6333aad48953834c910d18eb46d5fea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91486ac30f3db3fac750d9ee9432a306') in 0.011976 seconds
+  Import took 0.015838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004462 seconds.
+  path: Assets/BayatGames/SaveGameFree/Editor/Tests/SaveGameTests.cs
+  artifactKey: Guid(fbf8cb5a4cd15af4cbd0e8a78e7618e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Editor/Tests/SaveGameTests.cs using Guid(fbf8cb5a4cd15af4cbd0e8a78e7618e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe0e7f01887169780a5207f016af61a1') in 0.012129 seconds
+  Import took 0.015908 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003615 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Web/Save Web.unity
+  artifactKey: Guid(1a10f0dfbf6da5d49b0d701191e1b66c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Web/Save Web.unity using Guid(1a10f0dfbf6da5d49b0d701191e1b66c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e63a2cb4e10be70434d7d94d4e296096') in 0.003299 seconds
+  Import took 0.007071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005377 seconds.
+  path: Assets/BayatGames/SaveGameFree/PressKit
+  artifactKey: Guid(60646bd16b827b4429fb3b6de52b2391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/PressKit using Guid(60646bd16b827b4429fb3b6de52b2391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '369b3ca81039e5e509a711f52aad68e2') in 0.002647 seconds
+  Import took 0.006142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002609 seconds.
+  path: Assets/BayatGames/SaveGameFree/Editor/Tests
+  artifactKey: Guid(01dcd732922c99e41ae2dd2b6792e647) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Editor/Tests using Guid(01dcd732922c99e41ae2dd2b6792e647) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99b4607dbbb013550dd406109d7fb30c') in 0.002952 seconds
+  Import took 0.007404 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008639 seconds.
+  path: Assets/BayatGames/SaveGameFree/Documentation/Save Game Free Documentation - Rich Text Format Version.rtf
+  artifactKey: Guid(ebb4d211c8c06694b928706930e51a6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Documentation/Save Game Free Documentation - Rich Text Format Version.rtf using Guid(ebb4d211c8c06694b928706930e51a6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6380cb6a9cc80507f49a093c6f1ea9da') in 0.009530 seconds
+  Import took 0.013811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002681 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Shared/Prefabs
+  artifactKey: Guid(b0885cc058767d74b969920589da86a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Shared/Prefabs using Guid(b0885cc058767d74b969920589da86a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2d9bc97bd23dbb38854580b71adef63') in 0.002683 seconds
+  Import took 0.006299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003793 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Shared/Prefabs/Serializer Dropdown.prefab
+  artifactKey: Guid(8b98e7868a1a49b44b3861eed5d95f5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Shared/Prefabs/Serializer Dropdown.prefab using Guid(8b98e7868a1a49b44b3861eed5d95f5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05cb373a172aa62599a978b28d1c57c7') in 0.045077 seconds
+  Import took 0.049093 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003649 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Types/Color32Save.cs
+  artifactKey: Guid(08d80f924aa872f459389de9107a29f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Types/Color32Save.cs using Guid(08d80f924aa872f459389de9107a29f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab75942b69cf8da18c93aafe1cf2e5fb') in 0.002769 seconds
+  Import took 0.006476 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003804 seconds.
+  path: Assets/BayatGames/SaveGameFree/Documentation/Save Game Free Documentation - PDF Version.pdf
+  artifactKey: Guid(51d4332db9e6136489d1be3d5cc84909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Documentation/Save Game Free Documentation - PDF Version.pdf using Guid(51d4332db9e6136489d1be3d5cc84909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c9a90e414dad2a0d91e2b1f5835ab15') in 0.008129 seconds
+  Import took 0.011998 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003685 seconds.
+  path: Assets/BayatGames/SaveGameFree/Documentation/Save Game Free Documentation - Plain Text Version.txt
+  artifactKey: Guid(b5345537b48de5e4b9dc70a34f55dff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Documentation/Save Game Free Documentation - Plain Text Version.txt using Guid(b5345537b48de5e4b9dc70a34f55dff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3c6c3576af8b00090a1e30275957999') in 0.007431 seconds
+  Import took 0.011263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003848 seconds.
+  path: Assets/BayatGames/SaveGameFree/Documentation/Save Game Free Documentation - HTML Version.zip
+  artifactKey: Guid(814ef27c11b66e14b87ce4c64486ddd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Documentation/Save Game Free Documentation - HTML Version.zip using Guid(814ef27c11b66e14b87ce4c64486ddd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96bf3ed9d9c19db6d5395885e3c8f868') in 0.010801 seconds
+  Import took 0.014774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003797 seconds.
+  path: Assets/BayatGames/SaveGameFree/Plugins/FullSerializer.dll
+  artifactKey: Guid(da270e9c3edeec54fa489b76e176a028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Plugins/FullSerializer.dll using Guid(da270e9c3edeec54fa489b76e176a028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa2a74022c42528160f645265ae0c33c') in 0.006215 seconds
+  Import took 0.009968 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003649 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Types/Vector3Save.cs
+  artifactKey: Guid(d990e6b1c110f8e4f81aba20231342eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Types/Vector3Save.cs using Guid(d990e6b1c110f8e4f81aba20231342eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b761d99aa8bbb701c4af448933cc5b9') in 0.002734 seconds
+  Import took 0.006295 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003633 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Scale/Save Scale.unity
+  artifactKey: Guid(f65dff17093843b438b1004933ef888f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Scale/Save Scale.unity using Guid(f65dff17093843b438b1004933ef888f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e4fd0e46de63fe8f0a178dc0e1d7768') in 0.003068 seconds
+  Import took 0.006813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002781 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts
+  artifactKey: Guid(964b537f2fc8cb5479dffe33194ce929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts using Guid(964b537f2fc8cb5479dffe33194ce929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2df5870741c1bddd71a25ba4bd27d9ae') in 0.002633 seconds
+  Import took 0.006216 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003629 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Rotation/Save Rotation.unity
+  artifactKey: Guid(af2479abc55682340a15931d5eec4b28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Rotation/Save Rotation.unity using Guid(af2479abc55682340a15931d5eec4b28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a25ab2c85ad48c72156a7123e27afaf2') in 0.003130 seconds
+  Import took 0.006967 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002655 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Shared/Scripts
+  artifactKey: Guid(a93e59524aafe244c855890c84174446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Shared/Scripts using Guid(a93e59524aafe244c855890c84174446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b7732f72e9e808a3d2cea7f13324a08') in 0.002796 seconds
+  Import took 0.006453 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003727 seconds.
+  path: Assets/BayatGames/SaveGameFree/PressKit/Unity Social Media Images - Facebook-01.png
+  artifactKey: Guid(4c8a4c4e1df1741438dfc1b70bb9dbf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/PressKit/Unity Social Media Images - Facebook-01.png using Guid(4c8a4c4e1df1741438dfc1b70bb9dbf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6cd2e423f4c6889008f5c183848a0ab') in 0.024297 seconds
+  Import took 0.028039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003514 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Shared
+  artifactKey: Guid(73c14a781bb26c746991408340075754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Shared using Guid(73c14a781bb26c746991408340075754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11099bd940c4e7576ac3b4761e3297af') in 0.002640 seconds
+  Import took 0.006230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003641 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Encoders/ISaveGameEncoder.cs
+  artifactKey: Guid(f4b7a84024d2fb24a9314d250876d96c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Encoders/ISaveGameEncoder.cs using Guid(f4b7a84024d2fb24a9314d250876d96c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c747db571368411eb1d629ea7a905ec8') in 0.002645 seconds
+  Import took 0.006165 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003425 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/SaveGame.cs
+  artifactKey: Guid(37e43b64d96fe9b4bbae6f0068bea185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/SaveGame.cs using Guid(37e43b64d96fe9b4bbae6f0068bea185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5505f714dff4348733f51c1892d7ee6a') in 0.002664 seconds
+  Import took 0.006261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006319 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Types/ColorSave.cs
+  artifactKey: Guid(d2ccc2100fda8234cb74b188f02f5179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Types/ColorSave.cs using Guid(d2ccc2100fda8234cb74b188f02f5179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '906cb7fd21c2563faeafa4188b85ef14') in 0.002738 seconds
+  Import took 0.006658 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003811 seconds.
+  path: Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Large.ai
+  artifactKey: Guid(036a5a4804d6ec34c89375eaa0a19aab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Large.ai using Guid(036a5a4804d6ec34c89375eaa0a19aab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41c89a1a2253e45abbb5db21146d9e2f') in 0.007058 seconds
+  Import took 0.010955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003944 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Serializers/SaveGameJsonSerializer.cs
+  artifactKey: Guid(fc6cbbacce9587842a7fdcbec4a12e9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Serializers/SaveGameJsonSerializer.cs using Guid(fc6cbbacce9587842a7fdcbec4a12e9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6fa9049da26d0a48c18bed89077628d') in 0.002848 seconds
+  Import took 0.006970 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004111 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/SaveGameWeb.cs
+  artifactKey: Guid(57acd7a24fd4e76499824f150b6cef57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/SaveGameWeb.cs using Guid(57acd7a24fd4e76499824f150b6cef57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9b026e831d9f386b4dcbdf17b39fe3e') in 0.002769 seconds
+  Import took 0.006627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003685 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Types/Vector2Save.cs
+  artifactKey: Guid(cb704f66c798860409022f54505ad172) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Types/Vector2Save.cs using Guid(cb704f66c798860409022f54505ad172) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb8147f23d7b089f4313d31c49440163') in 0.002749 seconds
+  Import took 0.006480 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003743 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Types/MeshSave.cs
+  artifactKey: Guid(1c9682573139a3c448dedcabd384ce21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Types/MeshSave.cs using Guid(1c9682573139a3c448dedcabd384ce21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f72dbe0fcca8da284991e538f22851aa') in 0.002874 seconds
+  Import took 0.006481 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002671 seconds.
+  path: Assets/BayatGames/SaveGameFree/Documentation
+  artifactKey: Guid(e7bb8ae624566194faec37df38688334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Documentation using Guid(e7bb8ae624566194faec37df38688334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5eff1f4f1142eb868e40467ac4ea84f5') in 0.002614 seconds
+  Import took 0.006094 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003566 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Custom/ExampleSaveCustom.cs
+  artifactKey: Guid(5b43e46bfe117094197a50bc0d11da28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Custom/ExampleSaveCustom.cs using Guid(5b43e46bfe117094197a50bc0d11da28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f53a307447f79b6cb512a0586566c7ff') in 0.002674 seconds
+  Import took 0.006210 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003646 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Shared/Scripts/SerializerDropdown.cs
+  artifactKey: Guid(b74ca9d92dd00484b990705d81c0904b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Shared/Scripts/SerializerDropdown.cs using Guid(b74ca9d92dd00484b990705d81c0904b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32a642598fb782c58fda7290d617310b') in 0.002668 seconds
+  Import took 0.006349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002657 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples
+  artifactKey: Guid(2bb7a316032e39547b1b55c0549cba84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples using Guid(2bb7a316032e39547b1b55c0549cba84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62f0207246c02885099d3d90a9d98ea1') in 0.002669 seconds
+  Import took 0.006149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005628 seconds.
+  path: Assets/BayatGames/SaveGameFree/Readme.txt
+  artifactKey: Guid(8e008910deacfb64bac94831989143d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Readme.txt using Guid(8e008910deacfb64bac94831989143d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '201415a7cf5d3d03e5d56c11425521a5') in 0.003259 seconds
+  Import took 0.006915 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003724 seconds.
+  path: Assets/BayatGames/SaveGameFree/Web/Save Game Free - Web.zip
+  artifactKey: Guid(ad29f48e6276f1242959c2378a4b8732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Web/Save Game Free - Web.zip using Guid(ad29f48e6276f1242959c2378a4b8732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd77756fd621861ddcb6085e75e5985a5') in 0.003121 seconds
+  Import took 0.006722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003570 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Encoders/SaveGameSimpleEncoder.cs
+  artifactKey: Guid(118532b849a8c1a4daefc7c545411b80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Encoders/SaveGameSimpleEncoder.cs using Guid(118532b849a8c1a4daefc7c545411b80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c18d3cd18949899754cd2a1eb49a3834') in 0.002830 seconds
+  Import took 0.006875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002732 seconds.
+  path: Assets/BayatGames/SaveGameFree/Web
+  artifactKey: Guid(8b3335a78afad1c4ea501d98688a9ca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Web using Guid(8b3335a78afad1c4ea501d98688a9ca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b2083c8e46e1f606ff147510add74dc') in 0.002648 seconds
+  Import took 0.006116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003708 seconds.
+  path: Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Small.ai
+  artifactKey: Guid(39c58ff7c281b094fb01c068d8a16d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Small.ai using Guid(39c58ff7c281b094fb01c068d8a16d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ec643beb5558837420da1945339421f') in 0.003059 seconds
+  Import took 0.006818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002574 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Types
+  artifactKey: Guid(1cf982b081b97724cb37b8e573cc7f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Types using Guid(1cf982b081b97724cb37b8e573cc7f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a2415dddfac5be7da4909b653bdcd3a') in 0.002674 seconds
+  Import took 0.006211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003493 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/SaveGameAuto.cs
+  artifactKey: Guid(104ea6790eeb62e4fbc61601a70eb86b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/SaveGameAuto.cs using Guid(104ea6790eeb62e4fbc61601a70eb86b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0a35c9a809d9b7796ac5190db80d8fe') in 0.002658 seconds
+  Import took 0.006193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003500 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Auto Save/ExampleMoveObject.cs
+  artifactKey: Guid(965b49e01c565c24cb29bc2afae8efbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Auto Save/ExampleMoveObject.cs using Guid(965b49e01c565c24cb29bc2afae8efbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f7294a2ca35c78d76944784026edc78') in 0.002649 seconds
+  Import took 0.006254 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003396 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Web/ExampleSaveWeb.cs
+  artifactKey: Guid(ff23d7a521647b74fb67e989105a7c07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Web/ExampleSaveWeb.cs using Guid(ff23d7a521647b74fb67e989105a7c07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e551883a2d364450c2924da1a7356698') in 0.003009 seconds
+  Import took 0.007060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003516 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Scale/ExampleSaveScale.cs
+  artifactKey: Guid(5c8c129be0611f24dbacf92cc521b63a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Scale/ExampleSaveScale.cs using Guid(5c8c129be0611f24dbacf92cc521b63a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee3eb662ded7b562d369d192cb36f6a0') in 0.002646 seconds
+  Import took 0.006192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003687 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Serializers/SaveGameXmlSerializer.cs
+  artifactKey: Guid(4aac03cecff2aaa4faf32108f0e8bc8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Serializers/SaveGameXmlSerializer.cs using Guid(4aac03cecff2aaa4faf32108f0e8bc8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0ade125b90bc1f08c19c786aeaf0cd2') in 0.002725 seconds
+  Import took 0.006306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002785 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Web
+  artifactKey: Guid(e59a0ca83cbc2fc48b9e8a48d26ad154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Web using Guid(e59a0ca83cbc2fc48b9e8a48d26ad154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c71462a29051b730e8e1560465141b65') in 0.002657 seconds
+  Import took 0.006169 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003498 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Serializers/ISaveGameSerializer.cs
+  artifactKey: Guid(7de98063df0654449a3edc3e4f63ac3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Serializers/ISaveGameSerializer.cs using Guid(7de98063df0654449a3edc3e4f63ac3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63cea119190dcc1d5f1b27ba5957614c') in 0.002744 seconds
+  Import took 0.006478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003656 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Types/QuaternionSave.cs
+  artifactKey: Guid(d8d7e9466bf3e144aabe7bedc3b32dbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Types/QuaternionSave.cs using Guid(d8d7e9466bf3e144aabe7bedc3b32dbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dca923dd51702e57b06bcb8a6ebdaa0f') in 0.002740 seconds
+  Import took 0.006528 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003692 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Position/Save Position.unity
+  artifactKey: Guid(8d49e438e10b7624dbc0ed590062c901) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Position/Save Position.unity using Guid(8d49e438e10b7624dbc0ed590062c901) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53e94676e84e8c73b280839c08bae4bb') in 0.003034 seconds
+  Import took 0.006666 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002719 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Custom
+  artifactKey: Guid(c53ba0ec1541e984985df272b96dd49c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Custom using Guid(c53ba0ec1541e984985df272b96dd49c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '175e53ab1b75dc94c8f8abdaba44d1ce') in 0.002667 seconds
+  Import took 0.006228 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002488 seconds.
+  path: Assets/BayatGames/SaveGameFree/Plugins
+  artifactKey: Guid(0395ad231f3d49843aa4c1b40f9f70dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Plugins using Guid(0395ad231f3d49843aa4c1b40f9f70dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1029b0610d45a25548f395369d33981b') in 0.002648 seconds
+  Import took 0.006207 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003346 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Serializers/SaveGameBinarySerializer.cs
+  artifactKey: Guid(aca44e3bb6bef6445b1faf25fcd8ca07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Serializers/SaveGameBinarySerializer.cs using Guid(aca44e3bb6bef6445b1faf25fcd8ca07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d058f125e59b94cad746129ca92789e') in 0.002657 seconds
+  Import took 0.006200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003722 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Position/ExampleSavePosition.cs
+  artifactKey: Guid(fb993ecefb6bf3744bdf049c9d43828e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Position/ExampleSavePosition.cs using Guid(fb993ecefb6bf3744bdf049c9d43828e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e064c16fca3f1ce96c82c4f9e67cdaa') in 0.002708 seconds
+  Import took 0.006356 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003701 seconds.
+  path: Assets/BayatGames/SaveGameFree/PressKit/Unity Social Media Images - Facebook.ai
+  artifactKey: Guid(c82d00d7156197947a6595a3d9680f59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/PressKit/Unity Social Media Images - Facebook.ai using Guid(c82d00d7156197947a6595a3d9680f59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02d9c72c6f017c42cb5077afde2b26d7') in 0.003419 seconds
+  Import took 0.007025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003708 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Rotation/ExampleSaveRotation.cs
+  artifactKey: Guid(10d17969e1ad26641b2acdec79d4715f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Rotation/ExampleSaveRotation.cs using Guid(10d17969e1ad26641b2acdec79d4715f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '152d698b8ffe37799dc101729b8a5d33') in 0.002804 seconds
+  Import took 0.006714 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004240 seconds.
+  path: Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Icon.ai
+  artifactKey: Guid(a538286716552cb4d989be6d5a0f467f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Icon.ai using Guid(a538286716552cb4d989be6d5a0f467f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56e941756a1d706504953b67d1272a23') in 0.003246 seconds
+  Import took 0.007418 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002949 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Encoders
+  artifactKey: Guid(f4d20c41c87538c419c27fe80fb29d37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Encoders using Guid(f4d20c41c87538c419c27fe80fb29d37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3d6173d08293413f33353275032b88c') in 0.002796 seconds
+  Import took 0.006947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003960 seconds.
+  path: Assets/BayatGames/SaveGameFree/Documentation/Save Game Free Documentation - Microsoft Word Version.docx
+  artifactKey: Guid(2ac474a6f7da94a439bc2f53586c5d96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Documentation/Save Game Free Documentation - Microsoft Word Version.docx using Guid(2ac474a6f7da94a439bc2f53586c5d96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ffb102f630b77ba42b0937ee4aefed2') in 0.007949 seconds
+  Import took 0.012096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003024 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Position
+  artifactKey: Guid(46de3f086f065fa43b1d8a440076f85e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Position using Guid(46de3f086f065fa43b1d8a440076f85e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '064de07b001bcb28ef9553d3b7048947') in 0.002829 seconds
+  Import took 0.006926 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003708 seconds.
+  path: Assets/BayatGames/SaveGameFree/Scripts/Types/Vector4Save.cs
+  artifactKey: Guid(8d6d91eeab36bf14fa2fcc4a7083e8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Scripts/Types/Vector4Save.cs using Guid(8d6d91eeab36bf14fa2fcc4a7083e8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71c0acb780a5d2ef4d412eb47c7e2e22') in 0.003021 seconds
+  Import took 0.006813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002716 seconds.
+  path: Assets/BayatGames/SaveGameFree/Editor
+  artifactKey: Guid(06a6d4d1ae6941149a9ad1097fd73093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Editor using Guid(06a6d4d1ae6941149a9ad1097fd73093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '632b856a32724efa6e53f7b31d9ae067') in 0.002963 seconds
+  Import took 0.006505 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002729 seconds.
+  path: Assets/BayatGames/SaveGameFree/Examples/Save Rotation
+  artifactKey: Guid(cdbe9cc78b937af4dbe186e3068247c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/Examples/Save Rotation using Guid(cdbe9cc78b937af4dbe186e3068247c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a49873e2910a3b470a83c6ceffaedddd') in 0.002695 seconds
+  Import took 0.006163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003550 seconds.
+  path: Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Icon-01.png
+  artifactKey: Guid(24940c5d161f15d4dbbe4921b3677ac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Icon-01.png using Guid(24940c5d161f15d4dbbe4921b3677ac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f76675e4c8b4904a867e075b826a4ac8') in 0.013282 seconds
+  Import took 0.017290 seconds .
+
