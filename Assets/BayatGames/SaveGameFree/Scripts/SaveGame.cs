@@ -26,7 +26,12 @@ namespace BayatGames.SaveGameFree
         /// <summary>
         /// The data path. Application.dataPath
         /// </summary>
-        DataPath
+        DataPath,
+
+        /// <summary>
+        /// The custom path
+        /// </summary>
+        Custom
 
     }
 
@@ -379,7 +384,7 @@ namespace BayatGames.SaveGameFree
                 encoding = SaveGame.DefaultEncoding;
             }
             string filePath = "";
-            if (!IsFilePath(identifier))
+            if (!IsFilePath(identifier) && path != SaveGamePath.Custom)
             {
                 switch (path)
                 {
@@ -657,7 +662,7 @@ namespace BayatGames.SaveGameFree
             }
             T result = defaultValue;
             string filePath = "";
-            if (!IsFilePath(identifier))
+            if (!IsFilePath(identifier) && path != SaveGamePath.Custom)
             {
                 switch (path)
                 {
@@ -768,7 +773,7 @@ namespace BayatGames.SaveGameFree
                 throw new System.ArgumentNullException("identifier");
             }
             string filePath = "";
-            if (!IsFilePath(identifier))
+            if (!IsFilePath(identifier) && path != SaveGamePath.Custom)
             {
                 switch (path)
                 {
@@ -821,7 +826,7 @@ namespace BayatGames.SaveGameFree
                 throw new System.ArgumentNullException("identifier");
             }
             string filePath = "";
-            if (!IsFilePath(identifier))
+            if (!IsFilePath(identifier) && path != SaveGamePath.Custom)
             {
                 switch (path)
                 {
@@ -963,7 +968,7 @@ namespace BayatGames.SaveGameFree
                 identifier = string.Empty;
             }
             string filePath = "";
-            if (!IsFilePath(identifier))
+            if (!IsFilePath(identifier) && path != SaveGamePath.Custom)
             {
                 switch (path)
                 {
@@ -1025,7 +1030,7 @@ namespace BayatGames.SaveGameFree
                 identifier = string.Empty;
             }
             string filePath = "";
-            if (!IsFilePath(identifier))
+            if (!IsFilePath(identifier) && path != SaveGamePath.Custom)
             {
                 switch (path)
                 {
