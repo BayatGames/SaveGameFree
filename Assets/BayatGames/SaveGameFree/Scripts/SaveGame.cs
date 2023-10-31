@@ -405,8 +405,7 @@ namespace BayatGames.SaveGameFree
             {
                 obj = default(T);
             }
-            Stream stream = null;
-            Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+            Stream stream = null;`
             if (encode)
             {
                 stream = new MemoryStream();
