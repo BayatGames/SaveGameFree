@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 using UnityEngine.UI;
 
 using BayatGames.SaveGameFree.Serializers;
@@ -22,9 +20,9 @@ namespace BayatGames.SaveGameFree.Examples
         }
 
         private static ISaveGameSerializer[] m_Serializers = new ISaveGameSerializer[] {
-            new SaveGameXmlSerializer (),
-            new SaveGameJsonSerializer (),
-            new SaveGameBinarySerializer ()
+            new SaveGameXmlSerializer(),
+            new SaveGameJsonSerializer(),
+            new SaveGameBinarySerializer()
         };
 
         protected ISaveGameSerializer m_ActiveSerializer;
@@ -51,9 +49,9 @@ namespace BayatGames.SaveGameFree.Examples
             m_Singleton = this;
             base.Awake();
             options = new List<OptionData>() {
-                new OptionData ( "XML" ),
-                new OptionData ( "JSON" ),
-                new OptionData ( "Binary" )
+                new OptionData("XML"),
+                new OptionData("JSON"),
+                new OptionData("Binary")
             };
             onValueChanged.AddListener(OnValueChanged);
             value = SaveGame.Load<int>("serializer", 0, false, "", new SaveGameJsonSerializer(), null, SaveGame.DefaultEncoding, SaveGame.SavePath);

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 using BayatGames.SaveGameFree.Types;
 
@@ -44,10 +42,14 @@ namespace BayatGames.SaveGameFree.Examples
 
         void Update()
         {
-            Vector3 newPosition = target.position;
-            newPosition.x += Input.GetAxis("Horizontal");
-            newPosition.y += Input.GetAxis("Vertical");
-            target.position = newPosition;
+            HandleMovement();
+            void HandleMovement()
+            {
+                Vector3 newPosition = target.position;
+                newPosition.x += Input.GetAxis("Horizontal");
+                newPosition.y += Input.GetAxis("Vertical");
+                target.position = newPosition;
+            }
         }
 
         void OnApplicationQuit()

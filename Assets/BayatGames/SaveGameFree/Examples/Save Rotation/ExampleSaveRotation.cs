@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 using BayatGames.SaveGameFree.Types;
 
@@ -14,37 +12,37 @@ namespace BayatGames.SaveGameFree.Examples
 		public bool loadOnStart = true;
 		public string identifier = "exampleSaveRotation.dat";
 
-		void Start ()
+		void Start()
 		{
-			if ( loadOnStart )
+			if (loadOnStart)
 			{
-				Load ();
+				Load();
 			}
 		}
 
-		void Update ()
+		void Update()
 		{
 			Vector3 rotation = target.rotation.eulerAngles;
-			rotation.z += Input.GetAxis ( "Horizontal" );
-			target.rotation = Quaternion.Euler ( rotation );
+			rotation.z += Input.GetAxis("Horizontal");
+			target.rotation = Quaternion.Euler(rotation);
 		}
 
-		void OnApplicationQuit ()
+		void OnApplicationQuit()
 		{
-			Save ();
+			Save();
 		}
 
-		public void Save ()
+		public void Save()
 		{
-			SaveGame.Save<QuaternionSave> ( identifier, target.rotation, SerializerDropdown.Singleton.ActiveSerializer );
+			SaveGame.Save<QuaternionSave>(identifier, target.rotation, SerializerDropdown.Singleton.ActiveSerializer);
 		}
 
-		public void Load ()
+		public void Load()
 		{
-			target.rotation = SaveGame.Load<QuaternionSave> (
+			target.rotation = SaveGame.Load<QuaternionSave>(
 				identifier,
 				Quaternion.identity,
-				SerializerDropdown.Singleton.ActiveSerializer );
+				SerializerDropdown.Singleton.ActiveSerializer);
 		}
 
 	}

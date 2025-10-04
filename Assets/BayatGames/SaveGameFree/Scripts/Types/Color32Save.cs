@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace BayatGames.SaveGameFree.Types
@@ -18,7 +16,7 @@ namespace BayatGames.SaveGameFree.Types
 		public byte b;
 		public byte a;
 
-		public Color32Save ( Color32 color )
+		public Color32Save(Color32 color)
 		{
 			this.r = color.r;
 			this.g = color.g;
@@ -26,14 +24,14 @@ namespace BayatGames.SaveGameFree.Types
 			this.a = color.a;
 		}
 
-		public static implicit operator Color32Save ( Color32 color )
+		public static implicit operator Color32Save(Color32 color)
 		{
-			return new Color32Save ( color );
+			return new Color32Save(color);
 		}
 
-		public static implicit operator Color32 ( Color32Save color )
+		public static implicit operator Color32(Color32Save color)
 		{
-			return new Color32 ( color.r, color.g, color.b, color.a );
+			return new Color32(color.r, color.g, color.b, color.a);
 		}
 
 	}

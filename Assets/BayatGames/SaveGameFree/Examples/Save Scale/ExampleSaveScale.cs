@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 using BayatGames.SaveGameFree.Types;
 
@@ -14,38 +12,38 @@ namespace BayatGames.SaveGameFree.Examples
 		public bool loadOnStart = true;
 		public string identifier = "exampleSaveScale.dat";
 
-		void Start ()
+		void Start()
 		{
-			if ( loadOnStart )
+			if (loadOnStart)
 			{
-				Load ();
+				Load();
 			}
 		}
 
-		void Update ()
+		void Update()
 		{
 			Vector3 scale = target.localScale;
-			scale.x += Input.GetAxis ( "Horizontal" );
-			scale.y += Input.GetAxis ( "Vertical" );
+			scale.x += Input.GetAxis("Horizontal");
+			scale.y += Input.GetAxis("Vertical");
 			target.localScale = scale;
 		}
 
-		void OnApplicationQuit ()
+		void OnApplicationQuit()
 		{
-			Save ();
+			Save();
 		}
 
-		public void Save ()
+		public void Save()
 		{
-			SaveGame.Save<Vector3Save> ( identifier, target.localScale, SerializerDropdown.Singleton.ActiveSerializer );
+			SaveGame.Save<Vector3Save>(identifier, target.localScale, SerializerDropdown.Singleton.ActiveSerializer);
 		}
 
-		public void Load ()
+		public void Load()
 		{
-			target.localScale = SaveGame.Load<Vector3Save> (
+			target.localScale = SaveGame.Load<Vector3Save>(
 				identifier,
-				new Vector3Save ( 1f, 1f, 1f ),
-				SerializerDropdown.Singleton.ActiveSerializer );
+				new Vector3Save(1f, 1f, 1f),
+				SerializerDropdown.Singleton.ActiveSerializer);
 		}
 
 	}

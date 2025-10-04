@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Text;
-using UnityEngine;
 
 namespace BayatGames.SaveGameFree.Serializers
 {
@@ -20,7 +17,7 @@ namespace BayatGames.SaveGameFree.Serializers
 		/// <param name="stream">Stream.</param>
 		/// <param name="encoding">Encoding.</param>
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		void Serialize<T> ( T obj, Stream stream, Encoding encoding );
+		void Serialize<T>(T obj, Stream stream, Encoding encoding);
 
 		/// <summary>
 		/// Deserialize the specified object from stream using the encoding.
@@ -28,7 +25,7 @@ namespace BayatGames.SaveGameFree.Serializers
 		/// <param name="stream">Stream.</param>
 		/// <param name="encoding">Encoding.</param>
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		T Deserialize<T> ( Stream stream, Encoding encoding );
+		T Deserialize<T>(Stream stream, Encoding encoding);
 
 	}
 
