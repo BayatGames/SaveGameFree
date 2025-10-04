@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +8,7 @@ namespace BayatGames.SaveGameFree.Examples
 
     public class ExampleSaveCustom : MonoBehaviour
     {
+        [SerializeField] protected SaveGamePath saveGamePath = SaveGamePath.PersistentDataPath;
 
         [System.Serializable]
         public struct Level
@@ -38,10 +38,10 @@ namespace BayatGames.SaveGameFree.Examples
 
                 // Dummy data
                 this.levels = new List<Level>() {
-                    new Level ( true, false ),
-                    new Level ( false, false ),
-                    new Level ( false, true ),
-                    new Level ( true, false )
+                    new Level(true, false),
+                    new Level(false, false),
+                    new Level(false, true),
+                    new Level(true, false)
                 };
             }
 
@@ -73,6 +73,7 @@ namespace BayatGames.SaveGameFree.Examples
 
         public void Save()
         {
+            SaveGame.SavePath = saveGamePath;
             SaveGame.Save<CustomData>(this.identifier, this.customData, SerializerDropdown.Singleton.ActiveSerializer);
         }
 

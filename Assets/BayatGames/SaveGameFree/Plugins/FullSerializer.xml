@@ -110,7 +110,7 @@
         <member name="M:FullSerializer.Internal.fsPortableReflection.GetAttribute(System.Reflection.MemberInfo,System.Type,System.Boolean)">
              <summary>
              Fetches the given attribute from the given MemberInfo. This method applies caching
-             and is allocation free (after caching has been performed).
+             and is allocation free(after caching has been performed).
              </summary>
              <param name="element">The MemberInfo the get the attribute from.</param>
              <param name="attributeType">The type of attribute to fetch.</param>
@@ -264,7 +264,7 @@
              <summary>
              Creates a new instance of the type that this metadata points back to. If this type has a
              default constructor, then Activator.CreateInstance will be used to construct the type
-             (or Array.CreateInstance if it an array). Otherwise, an uninitialized object created via
+            (or Array.CreateInstance if it an array). Otherwise, an uninitialized object created via
              FormatterServices.GetSafeUninitializedObject is used to construct the instance.
              </summary>
             </member>
@@ -374,7 +374,7 @@
             </member>
         <member name="M:FullSerializer.fsAotCompilationManager.GenerateDirectConverterForTypeInCSharp(System.Type,FullSerializer.Internal.fsMetaProperty[],System.Boolean)">
              <summary>
-             AOT compiles the object (in C#).
+             AOT compiles the object(in C#).
              </summary>
             </member>
         <member name="T:FullSerializer.fsBaseConverter">
@@ -474,7 +474,7 @@
              Convert a C# field/property name into the key used for the JSON object. For example, you could
              force all JSON names to lowercase with:
             
-                fsConfig.GetJsonNameFromMemberName = (name, info) =&gt; name.ToLower();
+                fsConfig.GetJsonNameFromMemberName =(name, info) =&gt; name.ToLower();
             
              This will only be used when the name is not explicitly specified with fsProperty.
              </summary>
@@ -933,7 +933,7 @@
              <para>
              Multiple object processors can be active at the same time. When running they are
              called in a "nested" fashion - if we have processor1 and process2 added to the
-             serializer in that order (p1 then p2), then the execution order will be
+             serializer in that order(p1 then p2), then the execution order will be
              p1#Before p2#Before /serialization/ p2#After p1#After.
              </para>
              </summary>
@@ -975,7 +975,7 @@
              <remarks>
              **IMPORTANT**: The actual instance that gets passed here is *not* guaranteed to be an a subtype of storageType, since
              the value for instance is whatever the active converter returned for CreateInstance() - ie, some converters will return
-             dummy types in CreateInstance() if instance creation cannot be separated from deserialization (ie, KeyValuePair).
+             dummy types in CreateInstance() if instance creation cannot be separated from deserialization(ie, KeyValuePair).
              </remarks>
              <param name="storageType">The field/property type that is storing the instance.</param>
              <param name="instance">The created object instance. No deserialization has been applied to it.</param>
@@ -1074,7 +1074,7 @@
         <member name="P:FullSerializer.fsResult.Succeeded">
              <summary>
              Was the result a success? Note that even successful operations may have
-             warning messages (`RawMessages`) associated with them.
+             warning messages(`RawMessages`) associated with them.
              </summary>
             </member>
         <member name="P:FullSerializer.fsResult.HasWarnings">
@@ -1120,7 +1120,7 @@
             </member>
         <member name="F:FullSerializer.fsSerializer.Key_InstanceType">
              <summary>
-             This specifies the actual type of an object (the instance type was different from
+             This specifies the actual type of an object(the instance type was different from
              the field type).
              </summary>
             </member>
@@ -1179,7 +1179,7 @@
             </member>
         <member name="F:FullSerializer.fsSerializer._availableDirectConverters">
              <summary>
-             Direct converters (optimized _converters). We use these so we don't have to
+             Direct converters(optimized _converters). We use these so we don't have to
              perform a scan through every item in _converters and can instead just do an O(1)
              lookup. This is potentially important to perf when there are a ton of direct
              converters.

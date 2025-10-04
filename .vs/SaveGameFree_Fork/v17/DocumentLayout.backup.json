@@ -1,0 +1,114 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Github\\SaveGameFree_Fork\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E90131EA-4912-BB6F-ACB9-41A9D10EEDEE}|SaveGameFree.csproj|f:\\github\\savegamefree_fork\\assets\\bayatgames\\savegamefree\\editor\\tests\\savegametests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E90131EA-4912-BB6F-ACB9-41A9D10EEDEE}|SaveGameFree.csproj|solutionrelative:assets\\bayatgames\\savegamefree\\editor\\tests\\savegametests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54B008AD-80B9-AB05-2210-687FB28A2ADF}|Tests.csproj|F:\\Github\\SaveGameFree_Fork\\assets\\tests\\savegametests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54B008AD-80B9-AB05-2210-687FB28A2ADF}|Tests.csproj|solutionrelative:assets\\tests\\savegametests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E90131EA-4912-BB6F-ACB9-41A9D10EEDEE}|SaveGameFree.csproj|F:\\Github\\SaveGameFree_Fork\\assets\\bayatgames\\savegamefree\\scripts\\savegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E90131EA-4912-BB6F-ACB9-41A9D10EEDEE}|SaveGameFree.csproj|solutionrelative:assets\\bayatgames\\savegamefree\\scripts\\savegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E90131EA-4912-BB6F-ACB9-41A9D10EEDEE}|SaveGameFree.csproj|f:\\github\\savegamefree_fork\\assets\\bayatgames\\savegamefree\\scripts\\savegamepath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E90131EA-4912-BB6F-ACB9-41A9D10EEDEE}|SaveGameFree.csproj|solutionrelative:assets\\bayatgames\\savegamefree\\scripts\\savegamepath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E90131EA-4912-BB6F-ACB9-41A9D10EEDEE}|SaveGameFree.csproj|F:\\Github\\SaveGameFree_Fork\\assets\\bayatgames\\savegamefree\\scripts\\serializers\\savegamejsonserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E90131EA-4912-BB6F-ACB9-41A9D10EEDEE}|SaveGameFree.csproj|solutionrelative:assets\\bayatgames\\savegamefree\\scripts\\serializers\\savegamejsonserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SaveGameJsonSerializer.cs",
+              "DocumentMoniker": "F:\\Github\\SaveGameFree_Fork\\Assets\\BayatGames\\SaveGameFree\\Scripts\\Serializers\\SaveGameJsonSerializer.cs",
+              "RelativeDocumentMoniker": "Assets\\BayatGames\\SaveGameFree\\Scripts\\Serializers\\SaveGameJsonSerializer.cs",
+              "ToolTip": "F:\\Github\\SaveGameFree_Fork\\Assets\\BayatGames\\SaveGameFree\\Scripts\\Serializers\\SaveGameJsonSerializer.cs",
+              "RelativeToolTip": "Assets\\BayatGames\\SaveGameFree\\Scripts\\Serializers\\SaveGameJsonSerializer.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T03:06:28.075Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SaveGame.cs",
+              "DocumentMoniker": "F:\\Github\\SaveGameFree_Fork\\Assets\\BayatGames\\SaveGameFree\\Scripts\\SaveGame.cs",
+              "RelativeDocumentMoniker": "Assets\\BayatGames\\SaveGameFree\\Scripts\\SaveGame.cs",
+              "ToolTip": "F:\\Github\\SaveGameFree_Fork\\Assets\\BayatGames\\SaveGameFree\\Scripts\\SaveGame.cs",
+              "RelativeToolTip": "Assets\\BayatGames\\SaveGameFree\\Scripts\\SaveGame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T03:05:52.55Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SaveGameTests.cs",
+              "DocumentMoniker": "F:\\Github\\SaveGameFree_Fork\\Assets\\BayatGames\\SaveGameFree\\Editor\\Tests\\SaveGameTests.cs",
+              "RelativeDocumentMoniker": "Assets\\BayatGames\\SaveGameFree\\Editor\\Tests\\SaveGameTests.cs",
+              "ToolTip": "F:\\Github\\SaveGameFree_Fork\\Assets\\BayatGames\\SaveGameFree\\Editor\\Tests\\SaveGameTests.cs",
+              "RelativeToolTip": "Assets\\BayatGames\\SaveGameFree\\Editor\\Tests\\SaveGameTests.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAIwG4AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T03:22:01.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SaveGamePath.cs",
+              "DocumentMoniker": "F:\\Github\\SaveGameFree_Fork\\Assets\\BayatGames\\SaveGameFree\\Scripts\\SaveGamePath.cs",
+              "RelativeDocumentMoniker": "Assets\\BayatGames\\SaveGameFree\\Scripts\\SaveGamePath.cs",
+              "ToolTip": "F:\\Github\\SaveGameFree_Fork\\Assets\\BayatGames\\SaveGameFree\\Scripts\\SaveGamePath.cs",
+              "RelativeToolTip": "Assets\\BayatGames\\SaveGameFree\\Scripts\\SaveGamePath.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T03:18:02.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SaveGameTests.cs",
+              "DocumentMoniker": "F:\\Github\\SaveGameFree_Fork\\Assets\\Tests\\SaveGameTests.cs",
+              "RelativeDocumentMoniker": "Assets\\Tests\\SaveGameTests.cs",
+              "ToolTip": "F:\\Github\\SaveGameFree_Fork\\Assets\\Tests\\SaveGameTests.cs",
+              "RelativeToolTip": "Assets\\Tests\\SaveGameTests.cs",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T03:16:56.985Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
