@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace BayatGames.SaveGameFree.Types
@@ -18,7 +16,7 @@ namespace BayatGames.SaveGameFree.Types
 		public float z;
 		public float w;
 
-		public QuaternionSave ( float x )
+		public QuaternionSave(float x)
 		{
 			this.x = x;
 			this.y = 0f;
@@ -26,7 +24,7 @@ namespace BayatGames.SaveGameFree.Types
 			this.w = 0f;
 		}
 
-		public QuaternionSave ( float x, float y )
+		public QuaternionSave(float x, float y)
 		{
 			this.x = x;
 			this.y = y;
@@ -34,7 +32,7 @@ namespace BayatGames.SaveGameFree.Types
 			this.w = 0f;
 		}
 
-		public QuaternionSave ( float x, float y, float z )
+		public QuaternionSave(float x, float y, float z)
 		{
 			this.x = x;
 			this.y = y;
@@ -42,7 +40,7 @@ namespace BayatGames.SaveGameFree.Types
 			this.w = 0f;
 		}
 
-		public QuaternionSave ( float x, float y, float z, float w )
+		public QuaternionSave(float x, float y, float z, float w)
 		{
 			this.x = x;
 			this.y = y;
@@ -50,7 +48,7 @@ namespace BayatGames.SaveGameFree.Types
 			this.w = w;
 		}
 
-		public QuaternionSave ( Quaternion quaternion )
+		public QuaternionSave(Quaternion quaternion)
 		{
 			this.x = quaternion.x;
 			this.y = quaternion.y;
@@ -58,14 +56,14 @@ namespace BayatGames.SaveGameFree.Types
 			this.w = quaternion.w;
 		}
 
-		public static implicit operator QuaternionSave ( Quaternion quaternion )
+		public static implicit operator QuaternionSave(Quaternion quaternion)
 		{
-			return new QuaternionSave ( quaternion );
+			return new QuaternionSave(quaternion);
 		}
 
-		public static implicit operator Quaternion ( QuaternionSave quaternion )
+		public static implicit operator Quaternion(QuaternionSave quaternion)
 		{
-			return new Quaternion ( quaternion.x, quaternion.y, quaternion.z, quaternion.w );
+			return new Quaternion(quaternion.x, quaternion.y, quaternion.z, quaternion.w);
 		}
 
 	}

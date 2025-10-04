@@ -26,8 +26,8 @@ Save Game Free has a lot of awesome features that makes it like professional too
 * Encryption Flexibility by using Custom Encryptions and Built-in Encryption
 * Built-in Encryption
 * Web & Cloud Support
-* Cross Platform (Windows, MacOS, Linux, Android, iOS, tvOS, Samsung TV, Windows Store, missed one? Let us know)
-* Awesome Customer Support (Ask anything!)
+* Cross Platform(Windows, MacOS, Linux, Android, iOS, tvOS, Samsung TV, Windows Store, missed one? Let us know)
+* Awesome Customer Support(Ask anything!)
 * Auto Save, An Component that let’s you save objects automatically
 * Well Documented: Documented using Code Comments and Online Documentations
 
@@ -49,9 +49,9 @@ public class Example
         public int score;
 
 
-        void Start ()
+        void Start()
         {
-                SaveGame.Save<int> ( "score", score );
+                SaveGame.Save<int>("score", score);
         }
 
 
@@ -65,14 +65,14 @@ API Documentation
 It is a small documentation of Save Game Free API.
 
 
-SaveGame.Save<T> (string identifier, T obj);
+SaveGame.Save<T>(string identifier, T obj);
 
 
 * Identifier: The identifier.
 * Obj: The object to save.
 
 
-SaveGame.Load<T> (string identifier, T defaultValue);
+SaveGame.Load<T>(string identifier, T defaultValue);
 
 
 * Identifier: The identifier.

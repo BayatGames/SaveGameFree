@@ -579,7 +579,7 @@ namespace BayatGames.SaveGameFree
 #if UNITY_2019_1_OR_NEWER
             yield return this.m_Request.SendWebRequest();
 #else
-			yield return m_Request.Send ();
+			yield return m_Request.Send();
 #endif
 #if UNITY_2020_1_OR_NEWER
             if (this.m_Request.result != UnityWebRequest.Result.Success)
@@ -594,7 +594,7 @@ namespace BayatGames.SaveGameFree
                 this.m_Error = this.m_Request.error;
             }
 #else
-			if ( m_Request.isError )
+			if (m_Request.isError)
 			{
 				m_IsError = true;
 				m_Error = m_Request.error;

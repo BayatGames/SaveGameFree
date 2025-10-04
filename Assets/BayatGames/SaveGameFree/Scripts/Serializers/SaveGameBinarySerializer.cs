@@ -24,20 +24,20 @@ namespace BayatGames.SaveGameFree.Serializers
 		/// <param name="stream">Stream.</param>
 		/// <param name="encoding">Encoding.</param>
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public void Serialize<T> ( T obj, Stream stream, Encoding encoding )
+		public void Serialize<T>(T obj, Stream stream, Encoding encoding)
 		{
 			#if !UNITY_WSA || !UNITY_WINRT
 			try
 			{
-				BinaryFormatter formatter = new BinaryFormatter ();
-				formatter.Serialize ( stream, obj );
+				BinaryFormatter formatter = new BinaryFormatter();
+				formatter.Serialize(stream, obj);
 			}
-			catch ( Exception ex )
+			catch(Exception ex)
 			{
-				Debug.LogException ( ex );
+				Debug.LogException(ex);
 			}
 			#else
-			Debug.LogError ( "SaveGameFree: The Binary Serialization isn't supported in Windows Store and UWP." );
+			Debug.LogError("SaveGameFree: The Binary Serialization isn't supported in Windows Store and UWP.");
 			#endif
 		}
 
@@ -47,21 +47,21 @@ namespace BayatGames.SaveGameFree.Serializers
 		/// <param name="stream">Stream.</param>
 		/// <param name="encoding">Encoding.</param>
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public T Deserialize<T> ( Stream stream, Encoding encoding )
+		public T Deserialize<T>(Stream stream, Encoding encoding)
 		{
 			T result = default(T);
 			#if !UNITY_WSA || !UNITY_WINRT
 			try
 			{
-				BinaryFormatter formatter = new BinaryFormatter ();
-				result = ( T )formatter.Deserialize ( stream );
+				BinaryFormatter formatter = new BinaryFormatter();
+				result =(T)formatter.Deserialize(stream);
 			}
-			catch ( Exception ex )
+			catch(Exception ex)
 			{
-				Debug.LogException ( ex );
+				Debug.LogException(ex);
 			}
 			#else
-			Debug.LogError ( "SaveGameFree: The Binary Serialization isn't supported in Windows Store and UWP." );
+			Debug.LogError("SaveGameFree: The Binary Serialization isn't supported in Windows Store and UWP.");
 			#endif
 			return result;
 		}
