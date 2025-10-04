@@ -129,6 +129,29 @@ public class SaveGameTests
         var prevLoadCallback = SaveGame.LoadCallback;
 
         // Handlers we will attach
+        SaveGame.SaveHandler onSavingHandler, onSavedHandler;
+        SaveGame.LoadHandler onLoadingHandler, onLoadedHandler;
+        PrepHandlers();
+        void PrepHandlers()
+        {
+            onSavingHandler = (obj, id, encode, password, serializer, encoder, encoding, path) =>
+            {
+                calls.Add("OnSaving");
+            };
+            onSavedHandler = (obj, id, encode, password, serializer, encoder, encoding, path) =>
+            {
+                calls.Add("OnSaved");
+            };
+            onLoadingHandler = (loadedObj, id, encode, password, serializer, encoder, encoding, path) =>
+            {
+                calls.Add("OnLoading");
+            };
+            onLoadedHandler = (loadedObj, id, encode, password, serializer, encoder, encoding, path) =>
+            {
+                calls.Add("OnLoaded");
+            };
+        }
+
         SaveGame.SaveCallback = (obj, id, encode, password, serializer, encoder, encoding, path) =>
         {
             calls.Add("SaveCallback");
@@ -136,23 +159,6 @@ public class SaveGameTests
         SaveGame.LoadCallback = (loadedObj, id, encode, password, serializer, encoder, encoding, path) =>
         {
             calls.Add("LoadCallback");
-        };
-
-        SaveGame.SaveHandler onSavingHandler = (obj, id, encode, password, serializer, encoder, encoding, path) =>
-        {
-            calls.Add("OnSaving");
-        };
-        SaveGame.SaveHandler onSavedHandler = (obj, id, encode, password, serializer, encoder, encoding, path) =>
-        {
-            calls.Add("OnSaved");
-        };
-        SaveGame.LoadHandler onLoadingHandler = (loadedObj, id, encode, password, serializer, encoder, encoding, path) =>
-        {
-            calls.Add("OnLoading");
-        };
-        SaveGame.LoadHandler onLoadedHandler = (loadedObj, id, encode, password, serializer, encoder, encoding, path) =>
-        {
-            calls.Add("OnLoaded");
         };
 
         AddSubs();

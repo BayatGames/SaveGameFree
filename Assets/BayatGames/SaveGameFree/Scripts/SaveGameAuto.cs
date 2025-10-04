@@ -238,7 +238,7 @@ namespace BayatGames.SaveGameFree
 					encoding = SaveGame.DefaultEncoding;
 				}
 			}
-			switch(format)
+			switch (format)
 			{
 				case SaveFormat.Binary:
 					serializer = new SaveGameBinarySerializer();
