@@ -405,7 +405,7 @@ namespace BayatGames.SaveGameFree
             {
                 obj = default(T);
             }
-            Stream stream = null;`
+            Stream stream = null;
             if (encode)
             {
                 stream = new MemoryStream();
