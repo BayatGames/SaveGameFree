@@ -71,7 +71,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 169
+  controlID: 97
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 170
+  controlID: 98
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 77
+  controlID: 99
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 126
+  controlID: 100
   draggingID: 0
 --- !u!114 &15
 MonoBehaviour:
@@ -474,7 +474,7 @@ MonoBehaviour:
     m_ContainerData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 179
+    ID: 167
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_TestListGUIs:
   - m_Window: {fileID: 18}
     runProgress:
-      RunGuid: 6ff11bb0-e01e-4eb7-a6fe-711eac32eb38
+      RunGuid: 9ab77884-302a-498a-9be3-150a1ee12abf
       ExecutionSettings:
         m_TargetPlatform: 0
         m_HasTargetPlatform: 0
@@ -609,7 +609,7 @@ MonoBehaviour:
     m_SelectedOption: 0
   - m_Window: {fileID: 18}
     runProgress:
-      RunGuid: 6ff11bb0-e01e-4eb7-a6fe-711eac32eb38
+      RunGuid: 9ab77884-302a-498a-9be3-150a1ee12abf
       ExecutionSettings:
         m_TargetPlatform: 0
         m_HasTargetPlatform: 0
@@ -641,12 +641,12 @@ MonoBehaviour:
       CurrentStepName: Unlock Reload Assemblies
       CurrentStageName: 
     m_NewResultList:
-    - id: 1022
+    - id: 1023
       uniqueId: '[SaveGameFree][suite]'
       name: SaveGameFree
       fullName: SaveGameFree
       resultStatus: 1
-      duration: 0.0660796
+      duration: 0.062115297
       messages: 
       output: 
       stacktrace: 
@@ -662,7 +662,7 @@ MonoBehaviour:
       name: SaveGameFree.dll
       fullName: F:/Github/SaveGameFree_Fork/Library/ScriptAssemblies/SaveGameFree.dll
       resultStatus: 1
-      duration: 0.040945202
+      duration: 0.0389645
       messages: 
       output: 
       stacktrace: 
@@ -671,14 +671,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1022
+      parentId: 1023
       parentUniqueId: '[SaveGameFree][suite]'
     - id: 1009
       uniqueId: 'SaveGameFree.dll/[BayatGames][suite]'
       name: BayatGames
       fullName: BayatGames
       resultStatus: 1
-      duration: 0.040945202
+      duration: 0.0389645
       messages: 
       output: 
       stacktrace: 
@@ -694,7 +694,7 @@ MonoBehaviour:
       name: SaveGameFree
       fullName: BayatGames.SaveGameFree
       resultStatus: 1
-      duration: 0.040945202
+      duration: 0.0389645
       messages: 
       output: 
       stacktrace: 
@@ -710,7 +710,7 @@ MonoBehaviour:
       name: Tests
       fullName: BayatGames.SaveGameFree.Tests
       resultStatus: 1
-      duration: 0.040945202
+      duration: 0.0389645
       messages: 
       output: 
       stacktrace: 
@@ -726,7 +726,7 @@ MonoBehaviour:
       name: SaveGameTests
       fullName: BayatGames.SaveGameFree.Tests.SaveGameTests
       resultStatus: 1
-      duration: 0.040945202
+      duration: 0.0389645
       messages: 
       output: 
       stacktrace: 
@@ -742,7 +742,7 @@ MonoBehaviour:
       name: ClearTests
       fullName: BayatGames.SaveGameFree.Tests.SaveGameTests.ClearTests
       resultStatus: 1
-      duration: 0.0278516
+      duration: 0.0259922
       messages: 
       output: 'The specified identifier(test/clear) does not exists. please use Exists()
         to check for existent before calling Load.
@@ -765,7 +765,7 @@ MonoBehaviour:
       name: DeleteTests
       fullName: BayatGames.SaveGameFree.Tests.SaveGameTests.DeleteTests
       resultStatus: 1
-      duration: 0.0042931
+      duration: 0.0043262
       messages: 
       output: 'The specified identifier(test/delete) does not exists. please use
         Exists() to check for existent before calling Load.
@@ -788,7 +788,7 @@ MonoBehaviour:
       name: ExistsTests
       fullName: BayatGames.SaveGameFree.Tests.SaveGameTests.ExistsTests
       resultStatus: 1
-      duration: 0.0018245
+      duration: 0.0017514
       messages: 
       output: 
       stacktrace: 
@@ -805,7 +805,7 @@ MonoBehaviour:
       name: LoadTests
       fullName: BayatGames.SaveGameFree.Tests.SaveGameTests.LoadTests
       resultStatus: 1
-      duration: 0.0048715
+      duration: 0.004938
       messages: 
       output: 'The specified identifier(test/load2) does not exists. please use Exists()
         to check for existent before calling Load.
@@ -828,7 +828,7 @@ MonoBehaviour:
       name: SaveTests
       fullName: BayatGames.SaveGameFree.Tests.SaveGameTests.SaveTests
       resultStatus: 1
-      duration: 0.0021045
+      duration: 0.0019567
       messages: 
       output: 
       stacktrace: 
@@ -840,12 +840,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1005
       parentUniqueId: 'SaveGameFree.dll/BayatGames/SaveGameFree/Tests/[SaveGameFree][BayatGames.SaveGameFree.Tests.SaveGameTests][suite]'
-    - id: 1019
+    - id: 1020
       uniqueId: '[SaveGameFreeTests][F:/Github/SaveGameFree_Fork/Library/ScriptAssemblies/SaveGameFreeTests.dll][suite]'
       name: SaveGameFreeTests.dll
       fullName: F:/Github/SaveGameFree_Fork/Library/ScriptAssemblies/SaveGameFreeTests.dll
       resultStatus: 1
-      duration: 0.0251344
+      duration: 0.0231508
       messages: 
       output: 
       stacktrace: 
@@ -854,14 +854,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1022
+      parentId: 1023
       parentUniqueId: '[SaveGameFree][suite]'
     - id: 1012
       uniqueId: 'SaveGameFreeTests.dll/[SaveGameFreeTests][SaveGameTests][suite]'
       name: SaveGameTests
       fullName: SaveGameTests
       resultStatus: 1
-      duration: 0.0251344
+      duration: 0.0231508
       messages: 
       output: 
       stacktrace: 
@@ -870,14 +870,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1019
+      parentId: 1020
       parentUniqueId: '[SaveGameFreeTests][F:/Github/SaveGameFree_Fork/Library/ScriptAssemblies/SaveGameFreeTests.dll][suite]'
     - id: 1020
       uniqueId: 'SaveGameFreeTests.dll/SaveGameTests/[SaveGameFreeTests][SaveGameTests.Callbacks_Are_Invoked_On_Save_And_Load_In_Expected_Order]'
       name: Callbacks_Are_Invoked_On_Save_And_Load_In_Expected_Order
       fullName: SaveGameTests.Callbacks_Are_Invoked_On_Save_And_Load_In_Expected_Order
       resultStatus: 1
-      duration: 0.0103242
+      duration: 0.0066046
       messages: 
       output: 
       stacktrace: 
@@ -894,7 +894,7 @@ MonoBehaviour:
       name: Save_Creates_File_In_DataPath
       fullName: SaveGameTests.Save_Creates_File_In_DataPath
       resultStatus: 1
-      duration: 0.0101398
+      duration: 0.0110954
       messages: 
       output: 
       stacktrace: 
@@ -911,7 +911,7 @@ MonoBehaviour:
       name: Save_Creates_File_In_PersistentDataPath
       fullName: SaveGameTests.Save_Creates_File_In_PersistentDataPath
       resultStatus: 1
-      duration: 0.0015601
+      duration: 0.0020902
       messages: 
       output: 
       stacktrace: 
@@ -928,7 +928,7 @@ MonoBehaviour:
       name: Save_File_Has_Right_Name
       fullName: SaveGameTests.Save_File_Has_Right_Name
       resultStatus: 1
-      duration: 0.0020452
+      duration: 0.002274
       messages: 
       output: 
       stacktrace: 
@@ -940,29 +940,28 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1015
       parentUniqueId: 'SaveGameFreeTests.dll/[SaveGameFreeTests][SaveGameTests][suite]'
-    - id: 1017
-      uniqueId: 'SaveGameFreeTests.dll/SaveGameTests/[SaveGameFreeTests][SaveGameTests.Save_Throws_ArgumentNullException_On_Empty_Identifier]'
-      name: Save_Throws_ArgumentNullException_On_Empty_Identifier
-      fullName: SaveGameTests.Save_Throws_ArgumentNullException_On_Empty_Identifier
+    - id: 1018
+      uniqueId: 'SaveGameFreeTests.dll/SaveGameTests/[SaveGameFreeTests][SaveGameTests.Save_Throws_ArgumentNullException_On_NullOrEmpty_Identifier][suite]'
+      name: Save_Throws_ArgumentNullException_On_NullOrEmpty_Identifier
+      fullName: SaveGameTests.Save_Throws_ArgumentNullException_On_NullOrEmpty_Identifier
       resultStatus: 1
-      duration: 0.0007981
+      duration: 0.0010866
       messages: 
       output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
+      isSuite: 1
+      categories: []
       parentId: 1012
       parentUniqueId: 'SaveGameFreeTests.dll/[SaveGameFreeTests][SaveGameTests][suite]'
     - id: 1016
-      uniqueId: 'SaveGameFreeTests.dll/SaveGameTests/[SaveGameFreeTests][SaveGameTests.Save_Throws_ArgumentNullException_On_Null_Identifier]'
+      uniqueId: 'SaveGameFreeTests.dll/SaveGameTests/Save_Throws_ArgumentNullException_On_NullOrEmpty_Identifier/[SaveGameFreeTests][SaveGameTests.Save_Throws_ArgumentNullException_On_Null_Identifier]'
       name: Save_Throws_ArgumentNullException_On_Null_Identifier
       fullName: SaveGameTests.Save_Throws_ArgumentNullException_On_Null_Identifier
       resultStatus: 1
-      duration: 0.000267
+      duration: 0.0009368
       messages: 
       output: 
       stacktrace: 
@@ -972,9 +971,26 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1012
-      parentUniqueId: 'SaveGameFreeTests.dll/[SaveGameFreeTests][SaveGameTests][suite]'
-    m_ResultText: SaveGameFree (11 tests) (0.066s)
+      parentId: 1018
+      parentUniqueId: 'SaveGameFreeTests.dll/SaveGameTests/[SaveGameFreeTests][SaveGameTests.Save_Throws_ArgumentNullException_On_NullOrEmpty_Identifier][suite]'
+    - id: 1017
+      uniqueId: 'SaveGameFreeTests.dll/SaveGameTests/Save_Throws_ArgumentNullException_On_NullOrEmpty_Identifier/[SaveGameFreeTests][SaveGameTests.Save_Throws_ArgumentNullException_On_Empty_Identifier]'
+      name: Save_Throws_ArgumentNullException_On_Empty_Identifier
+      fullName: SaveGameTests.Save_Throws_ArgumentNullException_On_Empty_Identifier
+      resultStatus: 1
+      duration: 0.0001498
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: 'SaveGameFreeTests.dll/SaveGameTests/[SaveGameFreeTests][SaveGameTests.Save_Throws_ArgumentNullException_On_NullOrEmpty_Identifier][suite]'
+    m_ResultText: SaveGameFree (11 tests) (0.062s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
@@ -1010,7 +1026,7 @@ MonoBehaviour:
     m_SelectedOption: 0
   - m_Window: {fileID: 18}
     runProgress:
-      RunGuid: 6ff11bb0-e01e-4eb7-a6fe-711eac32eb38
+      RunGuid: 9ab77884-302a-498a-9be3-150a1ee12abf
       ExecutionSettings:
         m_TargetPlatform: 0
         m_HasTargetPlatform: 0
@@ -2550,7 +2566,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 84f8ffff24fbffff
+      m_ExpandedIDs: 82f8ffff1efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

@@ -94,23 +94,14 @@ public class SaveGameTests
     }
 
     [Test]
-    public void Save_Throws_ArgumentNullException_On_Null_Identifier()
+    [TestCase(null, TestName = "Save_Throws_ArgumentNullException_On_Null_Identifier")]
+    [TestCase("", TestName = "Save_Throws_ArgumentNullException_On_Empty_Identifier")]
+    public void Save_Throws_ArgumentNullException_On_NullOrEmpty_Identifier(string identifier)
     {
         SaveGame.SavePath = SaveGamePath.PersistentDataPath;
 
-        // Null
-        var exNull = Assert.Throws<ArgumentNullException>(() => SaveGame.Save<object>(null, new object()));
-        StringAssert.Contains("identifier", exNull.ParamName);
-    }
-
-    [Test]
-    public void Save_Throws_ArgumentNullException_On_Empty_Identifier()
-    {
-        SaveGame.SavePath = SaveGamePath.PersistentDataPath;
-
-        // Empty
-        var exEmpty = Assert.Throws<ArgumentNullException>(() => SaveGame.Save<object>(string.Empty, new object()));
-        StringAssert.Contains("identifier", exEmpty.ParamName);
+        var ex = Assert.Throws<ArgumentNullException>(() => SaveGame.Save<object>(identifier, new object()));
+        StringAssert.Contains("identifier", ex.ParamName);
     }
 
     [Test]

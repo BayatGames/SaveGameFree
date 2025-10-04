@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using BayatGames.SaveGameFree.Encoders;
+using BayatGames.SaveGameFree.Serializers;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
-
-using BayatGames.SaveGameFree.Encoders;
-using BayatGames.SaveGameFree.Serializers;
-
 using UnityEngine;
 
 namespace BayatGames.SaveGameFree
@@ -750,7 +749,15 @@ namespace BayatGames.SaveGameFree
             identifier ??= string.Empty;
             string filePath = DecideFilePath(identifier, path);
 
-            IList<DirectoryInfo> directories = DecideDirectoryInfo(filePath, path);
+            IList<DirectoryInfo> directories;
+            if (!Exists(filePath, path))
+            {
+                directories = Array.Empty<DirectoryInfo>();
+            }
+            else
+            {
+                directories = DecideDirectoryInfo(filePath, path);
+            }
             return directories;
         }
 
@@ -786,11 +793,6 @@ namespace BayatGames.SaveGameFree
         private static IList<DirectoryInfo> DecideDirectoryInfo(string filePath, SaveGamePath basePath)
         {
             IList<DirectoryInfo> result = new DirectoryInfo[0];
-            if (!Exists(filePath, basePath))
-            {
-                return result;
-            }
-
             if (Directory.Exists(filePath))
             {
                 DirectoryInfo info = new DirectoryInfo(filePath);

@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "F:\\Github\\SaveGameFree_Fork\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E90131EA-4912-BB6F-ACB9-41A9D10EEDEE}|SaveGameFree.csproj|F:\\Github\\SaveGameFree_Fork\\assets\\bayatgames\\savegamefree\\scripts\\savegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E90131EA-4912-BB6F-ACB9-41A9D10EEDEE}|SaveGameFree.csproj|f:\\github\\savegamefree_fork\\assets\\bayatgames\\savegamefree\\scripts\\savegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E90131EA-4912-BB6F-ACB9-41A9D10EEDEE}|SaveGameFree.csproj|solutionrelative:assets\\bayatgames\\savegamefree\\scripts\\savegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{E90131EA-4912-BB6F-ACB9-41A9D10EEDEE}|SaveGameFree.csproj|solutionrelative:assets\\bayatgames\\savegamefree\\editor\\tests\\savegametests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DA63A66-1C76-86A0-6B97-4B293A8704F6}|SaveGameFreeTests.csproj|f:\\github\\savegamefree_fork\\assets\\tests\\savegametests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9DA63A66-1C76-86A0-6B97-4B293A8704F6}|SaveGameFreeTests.csproj|F:\\Github\\SaveGameFree_Fork\\assets\\tests\\savegametests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9DA63A66-1C76-86A0-6B97-4B293A8704F6}|SaveGameFreeTests.csproj|solutionrelative:assets\\tests\\savegametests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -53,7 +53,7 @@
               "RelativeDocumentMoniker": "Assets\\BayatGames\\SaveGameFree\\Scripts\\SaveGame.cs",
               "ToolTip": "F:\\Github\\SaveGameFree_Fork\\Assets\\BayatGames\\SaveGameFree\\Scripts\\SaveGame.cs",
               "RelativeToolTip": "Assets\\BayatGames\\SaveGameFree\\Scripts\\SaveGame.cs",
-              "ViewState": "AgIAAE4DAAAAAAAAAAAQwFgDAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAO8CAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-04T03:05:52.55Z",
               "IsPinned": true,
@@ -70,8 +70,7 @@
               "ViewState": "AgIAALwAAAAAAAAAAAAwwKIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-04T03:16:56.985Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -91,8 +90,7 @@
               "RelativeToolTip": "Assets\\BayatGames\\SaveGameFree\\Editor\\Tests\\SaveGameTests.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwAcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T03:22:01.861Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-04T03:22:01.861Z"
             },
             {
               "$type": "Document",
