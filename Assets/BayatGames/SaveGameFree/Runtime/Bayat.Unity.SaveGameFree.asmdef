@@ -1,0 +1,14 @@
+{
+    "name": "Bayat.Unity.SaveGameFree",
+    "rootNamespace": "Bayat.Unity.SaveGameFree",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
