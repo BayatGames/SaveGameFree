@@ -1,0 +1,32 @@
+# Unity meta files
+*.meta
+
+# Documentation source (keep Documentation~ for package)
+Documentation.meta
+
+# Samples source (keep Samples~ for package)
+Examples.meta
+
+# Unity-specific files not needed in package
+PressKit/
+PressKit.meta
+Plugins.meta
+Web.meta
+
+# Development files
+.DS_Store
+Thumbs.db
+
+# Editor-only resources that shouldn't be in package distribution
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.pidb
+*.booproj
+
+# Backup files
+*~
+*.swp
+*.bak

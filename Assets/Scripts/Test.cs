@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-using BayatGames.SaveGameFree;
+using Bayat.Unity.SaveGameFree;
 
 public class Test : MonoBehaviour
 {

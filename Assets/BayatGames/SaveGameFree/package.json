@@ -1,0 +1,27 @@
+{
+  "name": "io.bayat.unity.savegamefree",
+  "version": "1.0.0",
+  "displayName": "Save Game Free",
+  "description": "A free and simple but powerful solution for saving and loading game data in Unity",
+  "unity": "6000.0",
+  "keywords": [
+    "save",
+    "load",
+    "persistence",
+    "serialization",
+    "storage"
+  ],
+  "author": {
+    "name": "Bayat Games",
+    "url": "https://bayat.io"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BayatGames/SaveGameFree.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BayatGames/SaveGameFree/issues"
+  },
+  "homepage": "https://github.com/BayatGames/SaveGameFree#readme"
+}
