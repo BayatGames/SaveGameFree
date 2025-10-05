@@ -1,4 +1,4 @@
-﻿using Bayat.Unity.SaveGameFree.Encoders;
+using Bayat.Unity.SaveGameFree.Encoders;
 using Bayat.Unity.SaveGameFree.Serializers;
 using System;
 using System.Collections.Generic;
@@ -230,6 +230,12 @@ namespace Bayat.Unity.SaveGameFree
                 return ignoredDirectories;
             }
         }
+
+        /// <summary>
+        /// Decides where on the file system to save the file. Of course, this only applies
+        /// when we're not saving to PlayerPrefs.
+        /// </summary>
+        public static ISavePathResolver PathResolver { get; set; } = new DefaultSavePathResolver();
 
         /// <summary>
         /// Saves data using the identifier.
@@ -881,16 +887,7 @@ namespace Bayat.Unity.SaveGameFree
         /// </summary>
         public static void DeleteAll(SaveGamePath path)
         {
-            string dirPath = "";
-            switch (path)
-            {
-                case SaveGamePath.PersistentDataPath:
-                    dirPath = Application.persistentDataPath;
-                    break;
-                case SaveGamePath.DataPath:
-                    dirPath = Application.dataPath;
-                    break;
-            }
+            string dirPath = PathResolver.GetSaveFolderPath(path);
 
             if (!usePlayerPrefs)
             {
@@ -1004,16 +1001,7 @@ namespace Bayat.Unity.SaveGameFree
                 // or small custom class that is supposed to be part of a bigger save-data class.
                 // And since this system doesn't specify slots, we assume that the identifier has the 
                 // slot number in it.
-                switch (basePath)
-                {
-                    default:
-                    case SaveGamePath.PersistentDataPath:
-                        result = $"{Application.persistentDataPath}/{identifier}";
-                        break;
-                    case SaveGamePath.DataPath:
-                        result = $"{Application.dataPath}/{identifier}";
-                        break;
-                }
+                result = PathResolver.GetSaveFilePath(identifier, basePath);
             }
             else
             {

@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace Bayat.Unity.SaveGameFree
 {
     /// <summary>
@@ -7,7 +5,6 @@ namespace Bayat.Unity.SaveGameFree
     /// </summary>
     public enum SaveGamePath
     {
-
         /// <summary>
         /// The persistent data path. Application.persistentDataPath
         /// </summary>
