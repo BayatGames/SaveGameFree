@@ -66,13 +66,13 @@ namespace Bayat.Unity.SaveGameFree
         private static SaveGamePath m_SavePath = SaveGamePath.PersistentDataPath;
         private static string m_EncodePassword = GenerateDefaultPassword();
         private static bool m_LogError = false;
-        private static bool usePlayerPrefs = false;
-        private static List<string> ignoredFiles = new List<string>()
+        private static bool m_UsePlayerPrefs = false;
+        private static List<string> m_IgnoredFiles = new List<string>()
         {
             "Player.log",
             "output_log.txt"
         };
-        private static List<string> ignoredDirectories = new List<string>()
+        private static List<string> m_IgnoredDirectories = new List<string>()
         {
             "Analytics"
         };
@@ -201,11 +201,11 @@ namespace Bayat.Unity.SaveGameFree
         {
             get
             {
-                return usePlayerPrefs;
+                return m_UsePlayerPrefs;
             }
             set
             {
-                usePlayerPrefs = value;
+                m_UsePlayerPrefs = value;
             }
         }
 
@@ -216,7 +216,7 @@ namespace Bayat.Unity.SaveGameFree
         {
             get
             {
-                return ignoredFiles;
+                return m_IgnoredFiles;
             }
         }
 
@@ -227,7 +227,7 @@ namespace Bayat.Unity.SaveGameFree
         {
             get
             {
-                return ignoredDirectories;
+                return m_IgnoredDirectories;
             }
         }
 
@@ -235,7 +235,26 @@ namespace Bayat.Unity.SaveGameFree
         /// Decides where on the file system to save the file. Of course, this only applies
         /// when we're not saving to PlayerPrefs.
         /// </summary>
-        public static ISavePathResolver PathResolver { get; set; } = new DefaultSavePathResolver();
+        public static ISavePathResolver PathResolver
+        {
+            get
+            {
+                m_PathResolver ??= new DefaultSavePathResolver();
+                return m_PathResolver;
+            }
+            set
+            {
+                m_PathResolver = value;
+
+                if (m_PathResolver == null)
+                {
+                    Debug.LogWarning("PathResolver is null. Reverting to DefaultSavePathResolver.");
+                    m_PathResolver = new DefaultSavePathResolver();
+                }
+            }
+        }
+
+        private static ISavePathResolver m_PathResolver = new DefaultSavePathResolver();
 
         /// <summary>
         /// Saves data using the identifier.
@@ -321,7 +340,7 @@ namespace Bayat.Unity.SaveGameFree
                         string data = Convert.ToBase64String(stream.ToArray());
                         string encoded = encoder.Encode(data, encryptionPassword);
 
-                        if (!usePlayerPrefs)
+                        if (!m_UsePlayerPrefs)
                         {
                             File.WriteAllText(filePath, encoded, encoding);
                         }
@@ -334,7 +353,7 @@ namespace Bayat.Unity.SaveGameFree
                 }
                 else
                 {
-                    if (!usePlayerPrefs)
+                    if (!m_UsePlayerPrefs)
                     {
                         EnsureDirectoryExists(filePath);
                         using (var stream = File.Create(filePath))
@@ -535,7 +554,7 @@ namespace Bayat.Unity.SaveGameFree
 
                 if (shouldLoadEncryptedData)
                 {
-                    string data = usePlayerPrefs
+                    string data = m_UsePlayerPrefs
                         ? PlayerPrefs.GetString(filePath)
                         : File.ReadAllText(filePath, encoding);
 
@@ -547,7 +566,7 @@ namespace Bayat.Unity.SaveGameFree
                 }
                 else
                 {
-                    if (!usePlayerPrefs)
+                    if (!m_UsePlayerPrefs)
                     {
                         using (var stream = File.OpenRead(filePath))
                         {
@@ -632,7 +651,7 @@ namespace Bayat.Unity.SaveGameFree
                         string data = Convert.ToBase64String(stream.ToArray());
                         string encoded = encoder.Encode(data, encryptionPassword);
 
-                        if (!usePlayerPrefs)
+                        if (!m_UsePlayerPrefs)
                         {
                             await System.IO.File.WriteAllTextAsync(filePath, encoded, encoding);
                         }
@@ -645,7 +664,7 @@ namespace Bayat.Unity.SaveGameFree
                 }
                 else
                 {
-                    if (!usePlayerPrefs)
+                    if (!m_UsePlayerPrefs)
                     {
                         EnsureDirectoryExists(filePath);
                         using (var stream = File.Create(filePath))
@@ -733,7 +752,7 @@ namespace Bayat.Unity.SaveGameFree
 
                 if (shouldLoadEncryptedData)
                 {
-                    string data = usePlayerPrefs
+                    string data = m_UsePlayerPrefs
                         ? PlayerPrefs.GetString(filePath)
                         : await File.ReadAllTextAsync(filePath, encoding);
 
@@ -745,7 +764,7 @@ namespace Bayat.Unity.SaveGameFree
                 }
                 else
                 {
-                    if (!usePlayerPrefs)
+                    if (!m_UsePlayerPrefs)
                     {
                         using (var stream = File.OpenRead(filePath))
                         {
@@ -803,7 +822,7 @@ namespace Bayat.Unity.SaveGameFree
             ValidateIdentifier(identifier);
             string filePath = DecideFilePath(identifier, basePath);
 
-            if (!usePlayerPrefs)
+            if (!m_UsePlayerPrefs)
             {
                 bool exists = Directory.Exists(filePath);
                 if (!exists)
@@ -838,10 +857,10 @@ namespace Bayat.Unity.SaveGameFree
             {
                 return;
             }
-            if (!usePlayerPrefs)
+            if (!m_UsePlayerPrefs)
             {
                 var fileName = Path.GetFileName(filePath);
-                if (ignoredFiles.Contains(fileName) || ignoredDirectories.Contains(fileName))
+                if (m_IgnoredFiles.Contains(fileName) || m_IgnoredDirectories.Contains(fileName))
                 {
                     return;
                 }
@@ -889,13 +908,13 @@ namespace Bayat.Unity.SaveGameFree
         {
             string dirPath = PathResolver.GetSaveFolderPath(path);
 
-            if (!usePlayerPrefs)
+            if (!m_UsePlayerPrefs)
             {
                 DirectoryInfo info = new DirectoryInfo(dirPath);
                 FileInfo[] files = info.GetFiles();
                 for(int i = 0; i < files.Length; i++)
                 {
-                    if (ignoredFiles.Contains(files[i].Name))
+                    if (m_IgnoredFiles.Contains(files[i].Name))
                     {
                         continue;
                     }
@@ -904,7 +923,7 @@ namespace Bayat.Unity.SaveGameFree
                 DirectoryInfo[] dirs = info.GetDirectories();
                 for(int i = 0; i < dirs.Length; i++)
                 {
-                    if (ignoredDirectories.Contains(dirs[i].Name))
+                    if (m_IgnoredDirectories.Contains(dirs[i].Name))
                     {
                         continue;
                     }

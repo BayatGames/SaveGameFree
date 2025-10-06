@@ -13,63 +13,63 @@ namespace Bayat.Unity.SaveGameFree
 
         public virtual string RelativePath
         {
-            get => _relativePath;
+            get => m_relativePath;
             protected set
             {
-                _relativePath = value;
+                m_relativePath = value;
 
                 // We want to make sure that the relative path is always valid
-                if (string.IsNullOrEmpty(_relativePath))
+                if (string.IsNullOrEmpty(m_relativePath))
                 {
-                    Debug.LogWarning($"Relative path is empty or null. Reverting it to the default: {_defaultRelativePath}");
-                    _relativePath = _defaultRelativePath;
+                    Debug.LogWarning($"Relative path is empty or null. Reverting it to the default: {m_defaultRelativePath}");
+                    m_relativePath = m_defaultRelativePath;
                 }
                 else
                 {
                     // We don't want to allow any slashes at the start or end of the path
-                    _relativePath = value.Trim()
+                    m_relativePath = value.Trim()
                         .TrimStart(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar)
                         .TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
 
-                    if (string.IsNullOrEmpty(_relativePath))
+                    if (string.IsNullOrEmpty(m_relativePath))
                     {
-                        Debug.LogWarning($"Relative path is empty or null after trimming slashes. Reverting it to the default: {_defaultRelativePath}");
-                        _relativePath = _defaultRelativePath;
+                        Debug.LogWarning($"Relative path is empty or null after trimming slashes. Reverting it to the default: {m_defaultRelativePath}");
+                        m_relativePath = m_defaultRelativePath;
                     }
                 }
                 
             }
         }
 
-        protected string _relativePath = "Saves";
-        protected static readonly string _defaultRelativePath = "Saves";
+        protected string m_relativePath = "Saves";
+        protected static readonly string m_defaultRelativePath = "Saves";
 
         public string FileExtension
         {
-            get => _fileExtension;
+            get => m_fileExtension;
             protected set
             {
-                _fileExtension = value;
-                if (string.IsNullOrEmpty(_fileExtension))
+                m_fileExtension = value;
+                if (string.IsNullOrEmpty(m_fileExtension))
                 {
                     Debug.LogWarning($"File extension is empty or null. Reverting it " +
-                        $"to the default: {_defaultFileExtension}");
-                    _fileExtension = _defaultFileExtension;
+                        $"to the default: {m_defaultFileExtension}");
+                    m_fileExtension = m_defaultFileExtension;
                 }
                 else
                 {
-                    _fileExtension = value.Trim().TrimStart('.'); // We want to insert the dot ourselves
-                    if (string.IsNullOrEmpty(_fileExtension))
+                    m_fileExtension = value.Trim().TrimStart('.'); // We want to insert the dot ourselves
+                    if (string.IsNullOrEmpty(m_fileExtension))
                     {
                         Debug.LogWarning($"File extension is empty or null after trimming. Reverting it " +
-                            $"to the default: {_defaultFileExtension}");
-                        _fileExtension = _defaultFileExtension;
+                            $"to the default: {m_defaultFileExtension}");
+                        m_fileExtension = m_defaultFileExtension;
                     }
                 }
             }
         }
-        protected string _fileExtension = "sav";
-        protected static readonly string _defaultFileExtension = "sav";
+        protected string m_fileExtension = "sav";
+        protected static readonly string m_defaultFileExtension = "sav";
 
         public string GetSaveFilePath(string fileName, object input)
         {
