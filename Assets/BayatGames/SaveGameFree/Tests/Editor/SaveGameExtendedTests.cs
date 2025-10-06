@@ -107,10 +107,10 @@ namespace Bayat.Unity.SaveGameFree.Tests
             string password = "testPassword123";
 
             await SaveGame.SaveAsync<string>(identifier, testData, true, password,
-                SaveGame.Serializer, SaveGame.Encoder, SaveGame.DefaultEncoding, SaveGamePath.PersistentDataPath);
+                SaveGame.Serializer, SaveGame.Encoder, SaveGame.DefaultEncoding, path);
 
             string loaded = await SaveGame.LoadAsync<string>(identifier, default(string), true, password,
-                SaveGame.Serializer, SaveGame.Encoder, SaveGame.DefaultEncoding, SaveGamePath.PersistentDataPath);
+                SaveGame.Serializer, SaveGame.Encoder, SaveGame.DefaultEncoding, path);
 
             Assert.AreEqual(testData, loaded, "Async encrypted data doesn't match.");
         }
@@ -341,7 +341,7 @@ namespace Bayat.Unity.SaveGameFree.Tests
             Assert.AreEqual(testData, loaded);
 
             // Cleanup
-            string filePath = $"{Application.persistentDataPath}/{identifier}";
+            string filePath = defaultResolver.GetSaveFilePath(identifier, path);
             PlayerPrefs.DeleteKey(filePath);
             SaveGame.UsePlayerPrefs = false;
         }

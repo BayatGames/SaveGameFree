@@ -16,28 +16,21 @@ namespace Bayat.Unity.SaveGameFree
             get => m_relativePath;
             protected set
             {
-                m_relativePath = value;
+                string processedPath = value?.Trim()
+                    .TrimStart(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar)
+                    .TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
 
-                // We want to make sure that the relative path is always valid
-                if (string.IsNullOrEmpty(m_relativePath))
+                if (string.IsNullOrEmpty(processedPath))
                 {
-                    Debug.LogWarning($"Relative path is empty or null. Reverting it to the default: {m_defaultRelativePath}");
+                    Debug.LogWarning($"Provided relative path was empty, null, or contained only " +
+                        $"slashes. Reverting to default: '{m_defaultRelativePath}'");
                     m_relativePath = m_defaultRelativePath;
                 }
                 else
                 {
-                    // We don't want to allow any slashes at the start or end of the path
-                    m_relativePath = value.Trim()
-                        .TrimStart(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar)
-                        .TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
-
-                    if (string.IsNullOrEmpty(m_relativePath))
-                    {
-                        Debug.LogWarning($"Relative path is empty or null after trimming slashes. Reverting it to the default: {m_defaultRelativePath}");
-                        m_relativePath = m_defaultRelativePath;
-                    }
+                    m_relativePath = processedPath;
                 }
-                
+
             }
         }
 
@@ -49,22 +42,17 @@ namespace Bayat.Unity.SaveGameFree
             get => m_fileExtension;
             protected set
             {
-                m_fileExtension = value;
-                if (string.IsNullOrEmpty(m_fileExtension))
+                var processedExtension = value?.Trim().TrimStart('.');
+
+                if (string.IsNullOrEmpty(processedExtension))
                 {
-                    Debug.LogWarning($"File extension is empty or null. Reverting it " +
-                        $"to the default: {m_defaultFileExtension}");
+                    Debug.LogWarning($"File extension is empty or null after trimming. Reverting " +
+                        $"it to the default: {m_defaultFileExtension}");
                     m_fileExtension = m_defaultFileExtension;
                 }
                 else
                 {
-                    m_fileExtension = value.Trim().TrimStart('.'); // We want to insert the dot ourselves
-                    if (string.IsNullOrEmpty(m_fileExtension))
-                    {
-                        Debug.LogWarning($"File extension is empty or null after trimming. Reverting it " +
-                            $"to the default: {m_defaultFileExtension}");
-                        m_fileExtension = m_defaultFileExtension;
-                    }
+                    m_fileExtension = processedExtension;
                 }
             }
         }
@@ -75,7 +63,8 @@ namespace Bayat.Unity.SaveGameFree
         {
             if (input is not SaveGamePath)
             {
-                Debug.LogWarning("Input is not of type SaveGamePath. Acting as if it was SaveGamePath.PersistentDataPath.");
+                Debug.LogWarning("Input is not of type SaveGamePath. Acting as if it was " +
+                    "SaveGamePath.PersistentDataPath.");
                 input = SaveGamePath.PersistentDataPath;
             }
 
@@ -95,7 +84,8 @@ namespace Bayat.Unity.SaveGameFree
             string result;
             if (input is not SaveGamePath)
             {
-                Debug.LogWarning("Input is not of type SaveGamePath. Acting as if it was SaveGamePath.PersistentDataPath.");
+                Debug.LogWarning("Input is not of type SaveGamePath. Acting as if it was " +
+                    "SaveGamePath.PersistentDataPath.");
                 input = SaveGamePath.PersistentDataPath;
             }
 
